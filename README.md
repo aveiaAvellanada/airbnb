@@ -23,6 +23,23 @@ basta con copiarla completa a una memoria USB.
 | A | Repetir la animación de la diapositiva |
 | Esc | Vista general de todas las diapositivas |
 
+## Exportar el PDF (para subir a Teams)
+
+```
+npm run pdf
+```
+
+Genera `salida/airbnb-kaseca.pdf`: 10 páginas 16:9, una por diapositiva, con las animaciones en su
+estado final y los enlaces de las referencias activos. Usa el Edge o Chrome instalado; no necesita internet.
+
+## Comprobar que funciona sin internet
+
+```
+npm run probar-offline
+```
+
+Abre `index.html` como con doble clic, bloquea la red y recorre las 10 diapositivas.
+
 ## Para el equipo de desarrollo
 
 - `npm install` instala las dependencias y regenera `vendor/`.

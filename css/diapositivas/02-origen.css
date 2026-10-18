@@ -25,7 +25,6 @@
   padding: 30px 36px 26px;
   background:
     linear-gradient(var(--rausch), var(--rausch)) 0 92px / 100% 2px no-repeat,
-    repeating-linear-gradient(transparent 0 45px, rgba(72, 110, 150, 0.22) 45px 47px) 0 92px / 100% calc(100% - 92px) no-repeat,
     var(--blanco);
   box-shadow:
     0 1px 2px rgba(60, 40, 20, 0.14),
@@ -40,8 +39,9 @@
   height: 46px;
   transform: rotate(-6deg);
   background:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 10px, transparent 10px 20px),
-    rgba(252, 100, 45, 0.42);
+    /* rayas con un degradado normal en mosaico: repeating-linear-gradient sale
+       en magenta en el PDF */
+    linear-gradient(90deg, #FDC9B4 50%, #FCBCA3 50%) 0 0 / 20px 100%;
 }
 
 .ficha__logo {
@@ -52,6 +52,8 @@
 }
 
 .ficha dl {
+  /* renglones de la tarjeta (mosaico; ver nota de la cinta sobre el PDF) */
+  background: linear-gradient(transparent 45px, rgba(72, 110, 150, 0.22) 45px) 0 0 / 100% 47px;
   display: grid;
   grid-template-columns: 140px 1fr;
   column-gap: 20px;

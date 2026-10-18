@@ -163,8 +163,9 @@
   height: 46px;
   transform: translateX(-50%) rotate(-3deg);
   background:
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 10px, transparent 10px 20px),
-    rgba(255, 90, 95, 0.4);
+    /* rayas con un degradado normal en mosaico: repeating-linear-gradient sale
+       en magenta en el PDF */
+    linear-gradient(90deg, #FECACA 50%, #FDBBBB 50%) 0 0 / 20px 100%;
 }
 
 .quien-paga h3 {

@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node scripts/servidor.mjs",
     "vendor": "node scripts/copiar-vendor.mjs",
-    "postinstall": "node scripts/copiar-vendor.mjs"
+    "postinstall": "node scripts/copiar-vendor.mjs",
+    "pdf": "node scripts/exportar-pdf.mjs",
+    "probar-offline": "node scripts/probar-sin-internet.mjs"
   },
   "dependencies": {
     "@fontsource-variable/plus-jakarta-sans": "5.3.0",

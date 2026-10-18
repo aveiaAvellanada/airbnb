@@ -92,9 +92,10 @@ El detalle por diapositiva está en `contenido.md`; las fuentes y el registro de
 
 - FASE 1 ✅ aprobada (commit e006824).
 - FASE 2 ✅ aprobada (commit "Fase 2: proyecto base y portada").
-- FASE 3 en curso — diapositivas: 2 ✅ aprobada (con fotos reales de los fundadores que aportó el
-  usuario, en `assets/fundadores/`) · 3 ✅ aprobada · 4 ✅ aprobada · el usuario pidió construir **todas las restantes seguidas**
-  y revisarlas al final: 5–10 ✔ hechas y verificadas (recorrido 1→10→1 sin errores, notas en las 10, 10 páginas de impresión en estado final). **FASE 3 completa, esperando revisión del usuario**; al aprobarla: commit «Fase 3» y seguir con la FASE 4 (script de exportación a PDF + prueba sin internet) (sin commit hasta cerrar la fase).
+- FASE 3 ✅ aprobada (commit bc570df).
+- FASE 4 ✅ aprobada: `npm run pdf` (scripts/exportar-pdf.mjs →
+  salida/airbnb-kaseca.pdf, 10 páginas) y `npm run probar-offline` (scripts/probar-sin-internet.mjs).
+  Pendiente del grupo: reescribir la diap. 9 (quitar «BORRADOR») y volver a correr `npm run pdf`.
 - Línea de tiempo: las diap. 2 y 3 llevan `data-auto-animate`; la versión compacta
   (`.linea-tiempo--compacta`, franja inferior, estilos en `css/linea-tiempo.css`) marca el hito
   actual con `<circle class="actual">` y `.etiqueta--actual`. Puntos y etiquetas de la franja compacta son HTML con
@@ -150,5 +151,7 @@ fuentes.md                 Fuentes y registro de cifras
     `autoAlpha: 1` explícito**: reveal.js deja en `opacity: 0` los elementos no emparejados al
     iniciar la transición y `gsap.from()` tomaría ese 0 como destino (quedan invisibles).
   - Probar la transición en ambos sentidos (→ y ←).
+- **PDF (aprendido en la Fase 4):** no usar `repeating-linear-gradient` ni `mix-blend-mode`: al
+  exportar salen en magenta. Para rayas, usar `linear-gradient` normal en mosaico con `background-size`.
 - **Verificación:** capturas con Playwright usando el Edge instalado (`channel: 'msedge'`), en
   1920×1080, 1366×768, 1024×768 y `?print-pdf`.
