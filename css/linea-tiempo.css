@@ -1,0 +1,104 @@
+/* Línea de tiempo compartida por las diapositivas 2 a 6.
+   El contenedor (.linea-tiempo, data-id="linea-tiempo") mide 1920 × 400 en todas:
+   así auto-animate solo lo desplaza y nunca lo deforma. Va en un elemento HTML
+   porque reveal.js mide con offsetTop/offsetWidth, que un <svg> no tiene.
+   El viewBox del dibujo empieza en y = 180 para conservar las coordenadas de la diap. 2. */
+
+.linea-tiempo {
+  position: absolute;
+  left: 0;
+  top: 590px;
+  width: 1920px;
+  height: 400px;
+}
+
+.linea-tiempo--compacta {
+  top: 720px; /* la línea queda en y ≈ 956 */
+}
+
+.linea-tiempo__dibujo {
+  position: absolute;
+  left: 0;
+  top: 180px;
+  width: 1920px;
+  height: 120px;
+  overflow: visible;
+}
+
+.linea-tiempo__ruta {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 5;
+  stroke-linecap: round;
+}
+
+.linea-tiempo__sigue {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-dasharray: 2 16;
+}
+
+.linea-tiempo__marca circle {
+  fill: var(--papel);
+  stroke: var(--hof);
+  stroke-width: 5;
+}
+
+.linea-tiempo__marca .relleno {
+  fill: var(--rausch);
+  stroke: none;
+}
+
+.linea-tiempo__marca path {
+  fill: none;
+  stroke: var(--foggy);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 2 9;
+}
+
+.avion path {
+  fill: var(--blanco);
+  stroke: var(--hof);
+  stroke-width: 3;
+  stroke-linejoin: round;
+}
+
+/* Etiquetas pequeñas sobre cada marca (versión compacta) */
+.linea-tiempo .etiqueta {
+  position: absolute;
+  top: 178px;
+  width: 240px;
+  margin-left: -120px;
+  text-align: center;
+  font-size: var(--t-pie);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--foggy);
+}
+
+.linea-tiempo .etiqueta--actual {
+  font-weight: 800;
+  color: var(--hof);
+}
+
+/* Puntos de la versión compacta: son HTML (con data-id propio) para que
+   auto-animate los deslice cuando la franja suma hitos nuevos. */
+.linea-tiempo .punto {
+  position: absolute;
+  top: 222px;
+  box-sizing: border-box;
+  width: 32px;
+  height: 32px;
+  margin-left: -16px;
+  border: 5px solid var(--hof);
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--rausch) 0 6px, var(--papel) 7px);
+}
+
+.linea-tiempo .punto--actual {
+  outline: 4px solid var(--rausch);
+  outline-offset: 5px;
+}

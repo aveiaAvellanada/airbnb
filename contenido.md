@@ -80,8 +80,8 @@ mismo `data-id`, y reveal.js la anima entre diapositivas consecutivas:
 ## Diapositiva 2 — El origen (2007–2008)
 
 - **Expositora:** Karly · **Tiempo:** 1:45
-- **Estilo:** cuaderno; línea de tiempo trazada a mano; tres "polaroids" de los fundadores hechas como
-  **ilustraciones SVG** (no fotos reales, ver decisión abierta 2).
+- **Estilo:** cuaderno; línea de tiempo trazada a mano; tres polaroids con las **fotografías de los
+  fundadores** que aportó el equipo (`assets/fundadores/`; origen en `fuentes.md` §5).
 - **Rúbrica:** (a) identificación e historia: nombre, país, sector, fundadores, año, hitos, línea de tiempo.
 
 **Texto en pantalla**
@@ -126,7 +126,7 @@ mismo `data-id`, y reveal.js la anima entre diapositivas consecutivas:
 ## Diapositiva 3 — Problema y público objetivo
 
 - **Expositora:** Karly · **Tiempo:** 1:40
-- **Estilo:** cuaderno; diagrama de dos lados dibujado a mano.
+- **Estilo:** cuaderno; diagrama de dos lados con dos stickers fotográficos que aportó el equipo (huéspedes y anfitriones, en `assets/problema/`).
 - **Rúbrica:** (b) qué necesidad resuelve, a quién se dirige, quién usa y quién paga.
 
 **Texto en pantalla**

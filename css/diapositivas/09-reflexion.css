@@ -1,0 +1,135 @@
+/* Diapositiva 9 — Reflexión del grupo (borrador; estilo de transición con notas de cuaderno) */
+
+.reflexion__borrador {
+  position: absolute;
+  right: var(--margen-der);
+  top: 56px;
+  padding: 8px 18px 10px;
+  border: 4px dashed var(--arches);
+  border-radius: 10px;
+  font-size: var(--t-pie);
+  font-weight: 800;
+  color: var(--arches);
+  transform: rotate(3deg);
+}
+
+.reflexion__etiqueta {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 64px;
+  font-size: var(--t-pie);
+  font-weight: 700;
+  color: var(--foggy);
+}
+
+.reflexion__pregunta {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 96px;
+  width: 1260px;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--foggy);
+}
+
+.reflexion__respuesta {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 196px;
+  width: 1560px;
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.12;
+}
+
+/* Ruta de San Francisco a Florencia */
+.ruta {
+  position: absolute;
+  left: 0;
+  top: 380px;
+  width: 1920px;
+  height: 130px;
+  overflow: visible;
+}
+
+.ruta__camino {
+  fill: none;
+  stroke: var(--rausch);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 1 14;
+}
+
+.ruta__pin path {
+  stroke: var(--hof);
+  stroke-width: 3;
+}
+
+.ruta text {
+  font-size: 24px;
+  font-weight: 800;
+  fill: var(--hof);
+}
+
+.ruta .ruta__lugar-sub {
+  font-size: 20px;
+  font-weight: 600;
+  fill: var(--foggy);
+}
+
+/* Notas de cada integrante */
+.aporte {
+  position: absolute;
+  top: 540px;
+  box-sizing: border-box;
+  width: 500px;
+  min-height: 380px;
+  padding: 30px 32px 28px;
+  background: var(--tinte);
+  box-shadow: 0 12px 26px -16px rgba(60, 40, 20, 0.45);
+}
+
+.aporte:nth-of-type(1) { left: 220px; --tinte: #FFE3E3; transform: rotate(-1.2deg); }
+.aporte:nth-of-type(2) { left: 760px; --tinte: #D6F0EC; transform: rotate(0.8deg); }
+.aporte:nth-of-type(3) { left: 1300px; --tinte: #FFE4D6; transform: rotate(-0.6deg); }
+
+.aporte .cinta {
+  top: -22px;
+  left: 50%;
+  width: 140px;
+  height: 40px;
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.aporte small {
+  display: block;
+  font-size: var(--t-pie);
+  font-weight: 700;
+  color: var(--foggy);
+}
+
+.aporte h3 {
+  margin-top: 2px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.aporte ul {
+  margin: 14px 0 0;
+  padding: 0 0 0 26px;
+  font-size: 24px;
+  line-height: 1.32;
+}
+
+.aporte li + li {
+  margin-top: 10px;
+}
+
+.aporte li::marker {
+  color: var(--rausch);
+}

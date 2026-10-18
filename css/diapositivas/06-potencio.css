@@ -1,0 +1,200 @@
+/* Diapositiva 6 — Lo que la potenció (estilo de transición: papel liso) */
+
+.potencio__titulo {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 70px;
+  font-size: var(--t-titulo);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.potencio__autor {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 160px;
+  font-size: var(--t-meta);
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+/* Cámara y foto */
+.camara {
+  position: absolute;
+  left: 210px;
+  top: 300px;
+  width: 300px;
+  height: 220px;
+  overflow: visible;
+}
+
+.camara .tinta {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.camara .destello {
+  fill: none;
+  stroke: var(--arches);
+  stroke-width: 6;
+  stroke-linecap: round;
+  opacity: 0;
+}
+
+.foto-ny {
+  left: 560px;
+  top: 232px;
+  width: 400px;
+  transform: rotate(3deg);
+}
+
+.foto-ny figcaption small {
+  font-size: 22px;
+  color: var(--foggy);
+}
+
+.foto-ny .cinta {
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+/* Destello del flash sobre toda la diapositiva: solo existe durante la animación */
+.flash {
+  position: absolute;
+  inset: 0;
+  background: var(--blanco);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.potencio__texto {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 720px;
+  width: 760px;
+  font-size: 30px;
+  line-height: 1.32;
+}
+
+/* Barras de ingresos */
+.barras__eje {
+  position: absolute;
+  left: 1060px;
+  top: 640px;
+  width: 460px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--hof);
+}
+
+.barra {
+  position: absolute;
+  width: 170px;
+  border-radius: 10px 10px 0 0;
+  transform-origin: 50% 100%;
+}
+
+.barra--antes {
+  left: 1090px;
+  top: 460px;
+  height: 180px;
+  background: #D9D4CE;
+}
+
+.barra--despues {
+  left: 1310px;
+  top: 280px;
+  height: 360px;
+  background: var(--rausch);
+}
+
+.barras__valor {
+  position: absolute;
+  width: 240px;
+  margin-left: -35px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.barras__valor--antes {
+  left: 1090px;
+  top: 404px;
+  font-size: 44px;
+  color: var(--foggy);
+}
+
+.barras__valor--despues {
+  left: 1310px;
+  top: 216px;
+  font-size: 56px;
+}
+
+.barras__etiqueta {
+  position: absolute;
+  top: 656px;
+  width: 220px;
+  margin-left: -25px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.barras__etiqueta--antes { left: 1090px; }
+.barras__etiqueta--despues { left: 1310px; }
+
+.barras__titulo {
+  position: absolute;
+  left: 1060px;
+  top: 730px;
+  width: 470px;
+  font-size: var(--t-pie);
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+/* Tarjetas: capital semilla y nuevo nombre */
+.hecho {
+  position: absolute;
+  left: 1572px;
+  box-sizing: border-box;
+  width: 236px;
+  padding: 22px 22px 24px;
+  background: var(--blanco);
+  box-shadow:
+    0 1px 2px rgba(60, 40, 20, 0.14),
+    0 14px 28px -16px rgba(60, 40, 20, 0.4);
+}
+
+.hecho--semilla { top: 240px; border-top: 8px solid var(--babu); }
+.hecho--nombre { top: 508px; border-top: 8px solid var(--rausch); }
+
+.hecho small {
+  display: block;
+  font-size: var(--t-pie);
+  font-weight: 700;
+  color: var(--foggy);
+}
+
+.hecho strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.hecho span {
+  display: block;
+  margin-top: 8px;
+  font-size: 22px;
+  line-height: 1.3;
+}

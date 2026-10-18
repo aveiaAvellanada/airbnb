@@ -1,0 +1,212 @@
+/* Diapositiva 5 — El valle de la muerte (estilo cuaderno "desordenado") */
+
+.valle__titulo {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 78px;
+  font-size: var(--t-titulo);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.valle__titulo span {
+  font-weight: 500;
+  color: var(--foggy);
+}
+
+/* Columna 1: nadie invirtió */
+.valle__cero {
+  position: absolute;
+  left: calc(var(--margen-izq) - 10px);
+  top: 176px;
+  font-size: 280px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--rausch);
+}
+
+.valle__inversionistas {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 452px;
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.valle__ronda {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 530px;
+  width: 470px;
+  font-size: 28px;
+  line-height: 1.32;
+}
+
+/* Columna 2: correos de rechazo */
+.correo {
+  position: absolute;
+  box-sizing: border-box;
+  width: 440px;
+  height: 124px;
+  padding: 14px 24px;
+  background: var(--blanco);
+  box-shadow:
+    0 1px 2px rgba(60, 40, 20, 0.14),
+    0 12px 24px -14px rgba(60, 40, 20, 0.4);
+}
+
+.correo small {
+  display: block;
+  margin-top: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+.correo b {
+  display: block;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.correo i {
+  display: block;
+  width: 70%;
+  height: 10px;
+  margin-top: 14px;
+  border-radius: 5px;
+  background: #E3DED8;
+}
+
+.correo .no {
+  position: absolute;
+  right: 18px;
+  top: 8px;
+  padding: 2px 12px 4px;
+  border: 4px solid var(--rausch);
+  border-radius: 9px;
+  font-size: 38px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: 1;
+  color: var(--rausch);
+  transform: rotate(-12deg);
+}
+
+.correo:nth-of-type(1) { left: 716px; top: 206px; transform: rotate(-3deg); }
+.correo:nth-of-type(2) { left: 728px; top: 276px; transform: rotate(2deg); }
+.correo:nth-of-type(3) { left: 712px; top: 346px; transform: rotate(-1.5deg); }
+.correo:nth-of-type(4) { left: 730px; top: 416px; transform: rotate(2.5deg); }
+.correo:nth-of-type(5) { left: 720px; top: 486px; transform: rotate(-1deg); }
+
+.valle__respuestas {
+  position: absolute;
+  left: 730px;
+  top: 630px;
+  width: 420px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Columna 3: cajas de cereal */
+.cereal {
+  position: absolute;
+  left: 1290px;
+  top: 190px;
+  width: 450px;
+  height: auto;
+  filter: drop-shadow(0 14px 18px rgba(60, 40, 20, 0.3));
+}
+
+.valle__cereal {
+  position: absolute;
+  left: 1250px;
+  top: 532px;
+  width: 540px;
+  font-size: 26px;
+  line-height: 1.3;
+}
+
+.valle__dinero {
+  position: absolute;
+  left: 1250px;
+  top: 616px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.valle__dinero strong {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* Fila inferior */
+.valle__cita {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 724px;
+  width: 900px;
+  margin: 0;
+  padding-left: 30px;
+  border-left: 6px solid var(--arches);
+}
+
+.valle__cita p {
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.valle__cita footer {
+  margin-top: 8px;
+  font-size: var(--t-pie);
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+.yc {
+  position: absolute;
+  left: 1290px;
+  top: 716px;
+  box-sizing: border-box;
+  width: 480px;
+  padding: 20px 28px 22px;
+  background: #D6F0EC;
+  box-shadow: 0 10px 22px -14px rgba(60, 40, 20, 0.45);
+  transform: rotate(-1.5deg);
+}
+
+.yc .cinta {
+  top: -22px;
+  left: 50%;
+  width: 140px;
+  height: 40px;
+  transform: translateX(-50%) rotate(3deg);
+}
+
+.yc small {
+  display: block;
+  font-size: var(--t-pie);
+  font-weight: 700;
+  color: var(--foggy);
+}
+
+.yc strong {
+  display: block;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.yc span {
+  display: block;
+  margin-top: 4px;
+  font-size: 28px;
+  font-weight: 600;
+}

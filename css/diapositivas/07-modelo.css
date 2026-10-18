@@ -1,0 +1,186 @@
+/* Diapositiva 7 — Modelo de negocio (estilo de transición) */
+
+.modelo__titulo {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 70px;
+  font-size: var(--t-titulo);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.modelo__bajada {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 168px;
+  width: 1120px;
+  font-size: 30px;
+  line-height: 1.3;
+}
+
+/* Filas: tarifa dividida y tarifa única */
+.fila__titulo {
+  position: absolute;
+  left: var(--margen-izq);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.fila__titulo span {
+  font-weight: 500;
+}
+
+.fila__titulo--dividida { top: 268px; }
+.fila__titulo--unica { top: 548px; }
+
+.nodo {
+  position: absolute;
+  width: 260px;
+  margin-left: -130px;
+  text-align: center;
+}
+
+.nodo svg,
+.nodo .nodo__icono {
+  display: block;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 8px;
+}
+
+.nodo .nodo__icono {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: var(--blanco);
+  box-shadow: 0 0 0 4px var(--hof);
+}
+
+.nodo .nodo__icono img {
+  width: 44px;
+  height: 44px;
+}
+
+.nodo small {
+  display: block;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+.nodo strong {
+  display: block;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.nodo--airbnb strong {
+  color: var(--rausch);
+}
+
+.nodo em {
+  display: block;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+.nodo--huesped { left: 540px; }
+.nodo--airbnb { left: 880px; }
+.nodo--anfitrion { left: 1220px; }
+
+.fila--dividida .nodo { top: 316px; }
+.fila--unica .nodo { top: 596px; }
+
+.flujo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  height: 1080px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.flujo path {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Monedas: solo existen durante la animación */
+.moneda {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0 -13px;
+  box-sizing: border-box;
+  border: 3px solid var(--hof);
+  border-radius: 50%;
+  background: var(--arches);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modelo__nota {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 846px;
+  width: 1080px;
+  font-size: var(--t-pie);
+  line-height: 1.4;
+  color: var(--foggy);
+}
+
+/* Lo que se queda Airbnb */
+.captura {
+  position: absolute;
+  left: 1400px;
+  top: 270px;
+  box-sizing: border-box;
+  width: 400px;
+  padding: 36px 34px 34px;
+  background: var(--blanco);
+  border-top: 10px solid var(--rausch);
+  box-shadow:
+    0 1px 2px rgba(60, 40, 20, 0.14),
+    0 18px 36px -20px rgba(60, 40, 20, 0.4);
+}
+
+.captura small {
+  display: block;
+  font-size: var(--t-pie);
+  font-weight: 700;
+  color: var(--foggy);
+}
+
+.captura strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.captura p {
+  margin-top: 12px;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.captura p + p {
+  margin-top: 18px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--foggy);
+}

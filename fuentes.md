@@ -153,7 +153,21 @@ Estado: ✅ confirmado en la fuente indicada · ⚠️ cifra reportada o aproxim
 - Texto vigente del Decreto 1836 de 2021 y si ya se expidió la modificación de 2026 que estudia el MinCIT (solo para la reflexión).
 - Nombre de la docente para la portada.
 
-## 5. Fuentes consultadas y descartadas
+## 5. Imágenes
+
+| Imagen | Archivo | Origen |
+|--------|---------|--------|
+| Fotografía de Brian Chesky | `assets/fundadores/brian-chesky.jpg` | Aportada por el equipo. El nombre original del archivo ("Headshot-IR-Crop-Airbnb") sugiere el retrato oficial de la página de inversionistas de Airbnb `[VERIFICAR]`. |
+| Fotografía de Joe Gebbia | `assets/fundadores/joe-gebbia.jpg` | Aportada por el equipo; fuente `[VERIFICAR]`. |
+| Fotografía de Nathan Blecharczyk | `assets/fundadores/nathan-blecharczyk.jpg` | Aportada por el equipo; fuente `[VERIFICAR]`. |
+| Stickers de huéspedes y anfitriones (diap. 3) | `assets/problema/huespedes.png`, `anfitriones.png` (originales en `assets/problema/originales/`) | Aportados por el equipo; fuente `[VERIFICAR]`. Se les quitó el fondo con `scripts/recortar-sticker.mjs`. |
+| Colchones inflables con cartel «AirBeds & Breakfast, $80/night» (diap. 1) | `assets/fotos/colchones-2007.jpg` (original en `assets/fotos/originales/`) | Aportada por el equipo. Es una **recreación**, no una foto de 2007; se rotula «(recreación)» en pantalla. Fuente `[VERIFICAR]`. |
+| Cajas de cereal Cap'n McCain's y Obama O's (diap. 5) | `assets/fotos/cajas-cereal.png` | Aportada por el equipo; fotografía de las cajas originales de 2008. Fuente `[VERIFICAR]`. |
+| Apartamento en Nueva York (diap. 6) | `assets/fotos/apartamento-nueva-york.jpg` | Aportada por el equipo; foto actual usada como ilustración (se rotula «foto ilustrativa»). Fuente `[VERIFICAR]`. |
+| Logo e ícono de Airbnb | `assets/logo/` | Archivos SVG entregados por el equipo; se usan sin modificar. |
+| Ilustraciones (colchones, avión, personas, etc.) | dentro de `index.html` | Dibujos SVG originales hechos para esta presentación. |
+
+## 6. Fuentes consultadas y descartadas
 
 - Wikipedia, blogs de anfitriones (Hostaway), boletines de Substack y resúmenes generados por IA (Stock Titan, Beancount): útiles para orientar la búsqueda, pero no se citan porque no son fuentes primarias ni medios reconocidos. Todas sus cifras se contrastaron contra F1–F22.
 - Fast Company, Axios, South China Morning Post: bloquearon la consulta automática (error 403); no se citan.

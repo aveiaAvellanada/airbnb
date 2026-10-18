@@ -1,33 +1,19 @@
-// Diapositiva 1 — Portada: los tres colchones se inflan uno tras otro y, al final,
-// la flecha sale de "a…" hacia el resto de la historia.
+// Diapositiva 1 — Portada: la foto de la polaroid se revela como una instantánea
+// (de blanco lechoso a la imagen) y, al final, la flecha sale de "a…" hacia el
+// resto de la historia.
 
 Animaciones.registrar('portada', () => {
   const linea = gsap.timeline({ delay: 0.4 });
 
-  // 1. Inflar: cada colchón parte casi plano y rebota hasta su altura final.
-  gsap.utils.toArray('.colchon').forEach((colchon, i) => {
-    const inicio = i * 0.5;
-    linea
-      .from(colchon, {
-        scaleY: 0.1,
-        scaleX: 1.07,
-        transformOrigin: '50% 100%',
-        duration: 1.1,
-        ease: 'elastic.out(1, 0.45)',
-      }, inicio)
-      .fromTo(colchon.querySelectorAll('.soplo'),
-        { opacity: 1, drawSVG: '0%' },
-        { drawSVG: '100%', duration: 0.35, stagger: 0.06, ease: 'power1.out' },
-        inicio)
-      .to(colchon.querySelectorAll('.soplo'),
-        { opacity: 0, y: -14, duration: 0.4, stagger: 0.06 },
-        inicio + 0.4);
-  });
+  // 1. La instantánea se revela. El destino repite el filtro de .polaroid img en base.css.
+  linea.fromTo('.portada__foto',
+    { filter: 'blur(6px) saturate(0) contrast(0.5) brightness(1.6) sepia(0.08)' },
+    { filter: 'blur(0px) saturate(0.9) contrast(1.04) brightness(1) sepia(0.08)', duration: 2, ease: 'power2.out' }, 0);
 
   // 2. La flecha se dibuja como un trazo a mano y termina en su punta. Ambas piezas
   //    quedan ocultas hasta su turno: con remate redondeado, un trazo de largo 0 se ve como un punto.
   linea
-    .addLabel('flecha', '-=0.2')
+    .addLabel('flecha', 1.4)
     .from('.portada__trazo', { autoAlpha: 0, duration: 0.01 }, 'flecha')
     .from('.portada__trazo', { drawSVG: '0%', duration: 1.4, ease: 'power2.inOut' }, 'flecha')
     .fromTo('.portada__punta',

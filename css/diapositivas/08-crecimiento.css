@@ -1,0 +1,218 @@
+/* Diapositiva 8 — Dificultades y crecimiento (estilo corporativo) */
+
+.crece__logo {
+  position: absolute;
+  left: calc(var(--margen-izq) - 6px);
+  top: 34px;
+  width: 180px;
+  height: 90px;
+}
+
+.crece__antes {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 128px;
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+.crece__gancho {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 172px;
+  font-size: 74px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.04;
+}
+
+.crece__gancho-fuente {
+  position: absolute;
+  left: 1040px;
+  top: 300px;
+  font-size: var(--t-pie);
+  color: var(--foggy);
+}
+
+.edificios {
+  position: absolute;
+  left: 1440px;
+  top: 40px;
+  width: 360px;
+  height: 290px;
+  overflow: visible;
+}
+
+/* Cifras de consolidación */
+.cifra {
+  position: absolute;
+  top: 368px;
+  box-sizing: border-box;
+  width: 500px;
+  min-height: 236px;
+  padding: 22px 30px 24px;
+  border-top: 8px solid var(--color);
+  background: #F7F7F7;
+}
+
+.cifra:nth-of-type(1) { left: 220px; --color: var(--rausch); }
+.cifra:nth-of-type(2) { left: 760px; --color: var(--babu); }
+.cifra:nth-of-type(3) { left: 1300px; --color: var(--arches); }
+
+.cifra strong {
+  display: block;
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.cifra strong small {
+  font-size: 40px;
+  letter-spacing: -0.01em;
+}
+
+.cifra > span {
+  display: block;
+  margin-top: 8px;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.cifra > em {
+  display: block;
+  margin-top: 8px;
+  font-size: 20px;
+  font-style: normal;
+  color: var(--foggy);
+}
+
+/* La dificultad y la respuesta */
+.crisis {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 640px;
+  width: 640px;
+}
+
+.crisis h3 {
+  margin-top: 2px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.crisis small {
+  display: block;
+  font-size: var(--t-pie);
+  font-weight: 700;
+  color: var(--rausch);
+}
+
+.crisis p {
+  margin-top: 10px;
+  font-size: 26px;
+  line-height: 1.35;
+}
+
+.respuesta {
+  position: absolute;
+  left: 920px;
+  top: 648px;
+  display: flex;
+  gap: 46px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.respuesta li {
+  position: relative;
+  box-sizing: border-box;
+  width: 262px;
+  padding: 18px 20px 20px;
+  border: 3px solid #E4E4E4;
+  border-radius: 14px;
+}
+
+.respuesta li + li::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 50%;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  background: var(--rausch);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.respuesta small {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--foggy);
+}
+
+.respuesta strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.respuesta li:last-child {
+  border-color: var(--rausch);
+}
+
+/* Línea de tiempo larga 2007–2026 */
+.historia {
+  position: absolute;
+  left: 0;
+  top: 850px;
+  width: 1920px;
+  height: 150px;
+  overflow: visible;
+}
+
+.historia .eje {
+  stroke: var(--hof);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.historia .startup {
+  fill: none;
+  stroke: var(--rausch);
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.historia circle {
+  fill: var(--blanco);
+  stroke: var(--hof);
+  stroke-width: 4;
+}
+
+.historia .hito-final {
+  fill: var(--rausch);
+  stroke: var(--rausch);
+}
+
+.historia text {
+  font-size: 21px;
+  font-weight: 600;
+  fill: var(--hof);
+}
+
+.historia .anio {
+  font-weight: 800;
+}
+
+.historia .rotulo-startup {
+  fill: var(--rausch);
+  font-weight: 800;
+}

@@ -104,20 +104,13 @@
   transform: translateX(-50%) rotate(-4deg);
 }
 
-/* Ilustración: las líneas de tinta van en Hof, como dibujadas con marcador */
-.portada__escena .tinta {
-  fill: none;
-  stroke: var(--hof);
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+/* Foto de la polaroid: recreación de 2007 */
+.portada__polaroid .portada__foto {
+  aspect-ratio: 1 / 0.86;
+  object-position: 50% 60%;
 }
 
-/* Las bocanadas de aire solo existen durante la animación */
-.portada__escena .soplo {
-  fill: none;
-  stroke: var(--hof);
-  stroke-width: 3;
-  stroke-linecap: round;
-  opacity: 0;
+.portada__polaroid figcaption small {
+  font-size: 22px;
+  color: var(--foggy);
 }

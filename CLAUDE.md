@@ -85,6 +85,29 @@ El detalle por diapositiva está en `contenido.md`; las fuentes y el registro de
   - FASE 3 — Diapositivas 2 a 10, **de una en una**, esperando revisión después de cada una.
   - FASE 4 — Exportación a PDF y prueba sin internet.
 - Git: inicializar el repositorio y hacer **un commit al terminar cada fase aprobada**.
+- Las sesiones son cortas: después de **cada diapositiva** hay que parar y preguntar si se sigue,
+  y actualizar la sección "Estado del avance" antes de parar.
+
+## Estado del avance
+
+- FASE 1 ✅ aprobada (commit e006824).
+- FASE 2 ✅ aprobada (commit "Fase 2: proyecto base y portada").
+- FASE 3 en curso — diapositivas: 2 ✅ aprobada (con fotos reales de los fundadores que aportó el
+  usuario, en `assets/fundadores/`) · 3 ✅ aprobada · 4 ✅ aprobada · el usuario pidió construir **todas las restantes seguidas**
+  y revisarlas al final: 5–10 ✔ hechas y verificadas (recorrido 1→10→1 sin errores, notas en las 10, 10 páginas de impresión en estado final). **FASE 3 completa, esperando revisión del usuario**; al aprobarla: commit «Fase 3» y seguir con la FASE 4 (script de exportación a PDF + prueba sin internet) (sin commit hasta cerrar la fase).
+- Línea de tiempo: las diap. 2 y 3 llevan `data-auto-animate`; la versión compacta
+  (`.linea-tiempo--compacta`, franja inferior, estilos en `css/linea-tiempo.css`) marca el hito
+  actual con `<circle class="actual">` y `.etiqueta--actual`. Puntos y etiquetas de la franja compacta son HTML con
+  `data-id` (`lt-p1…lt-p5`, `lt-e1…lt-e5`) para que se deslicen: diap. 3–4 usan 3 hitos (x 400/1000/1600);
+  diap. 5–6 usan 5 hitos (x 330/640/950/1260/1570: oct-07, mar-08, ago-08, ene-09, mar-09).
+  La diap. 7 no la lleva. Contadores: `Animaciones.contar(el, vars)` con `data-valor` (restaura el texto).
+- Decisiones del usuario: fotos reales para los fundadores (diap. 2) y stickers fotográficos de
+  huéspedes y anfitriones (diap. 3, PNG generados con `scripts/recortar-sticker.mjs` desde
+  `assets/problema/originales/`) y fotos en `assets/fotos/` (diap. 1 colchones «recreación», diap. 5
+  cajas de cereal, diap. 6 apartamento «foto ilustrativa»; reducidas con `scripts/redimensionar.mjs`),
+  todo aportado por el usuario; el resto, ilustraciones SVG propias; dificultad de la diap. 8 =
+  crisis de confianza de 2011; capital semilla de Sequoia sin monto; el nombre de la docente aún
+  no se tiene (no se muestra en la portada).
 
 ## Carpetas
 
@@ -119,5 +142,13 @@ fuentes.md                 Fuentes y registro de cifras
 - **SVG:** no usar `<use>` para piezas con estilos de clase (el CSS no llega a su árbol interno);
   repetir el marcado. Para trazos que se dibujan con DrawSVG y remate redondeado, ocultarlos
   (`autoAlpha`) hasta que empiecen, o se ve un punto.
+- **Auto-animate (aprendido en la diap. 3):**
+  - El `data-id` compartido va en un elemento **HTML** del mismo tamaño en ambas diapositivas
+    (reveal.js mide con `offsetTop`/`offsetWidth`; en un `<svg>` da `NaN` y no anima, y si el
+    tamaño cambia, deforma). La línea de tiempo usa `.linea-tiempo[data-id="linea-tiempo"]` (1920×400).
+  - En diapositivas con `data-auto-animate`, la opacidad se anima **siempre con `fromTo` y
+    `autoAlpha: 1` explícito**: reveal.js deja en `opacity: 0` los elementos no emparejados al
+    iniciar la transición y `gsap.from()` tomaría ese 0 como destino (quedan invisibles).
+  - Probar la transición en ambos sentidos (→ y ←).
 - **Verificación:** capturas con Playwright usando el Edge instalado (`channel: 'msedge'`), en
   1920×1080, 1366×768, 1024×768 y `?print-pdf`.

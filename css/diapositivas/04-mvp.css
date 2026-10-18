@@ -1,0 +1,165 @@
+/* Diapositiva 4 — El MVP y la tecnología (estilo cuaderno con bocetos de pantalla) */
+
+.mvp__titulo {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 78px;
+  font-size: var(--t-titulo);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.mvp__pregunta {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 214px;
+  width: 700px;
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  color: var(--rausch);
+}
+
+.mvp__valor {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 420px;
+  width: 680px;
+}
+
+.mvp__valor h3 {
+  font-size: var(--t-meta);
+  font-weight: 800;
+  color: var(--foggy);
+}
+
+.mvp__valor h3 ~ p {
+  margin-top: 10px;
+  font-size: 32px;
+  line-height: 1.3;
+}
+
+.mvp__valor strong {
+  font-weight: 800;
+}
+
+.mvp__cita {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 652px;
+  width: 660px;
+  margin: 0;
+  padding-left: 30px;
+  border-left: 6px solid var(--babu);
+}
+
+.mvp__cita p {
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.32;
+}
+
+.mvp__cita footer {
+  margin-top: 10px;
+  font-size: var(--t-pie);
+  font-weight: 600;
+  color: var(--foggy);
+}
+
+/* Boceto de la página del MVP */
+.boceto {
+  position: absolute;
+  left: 980px;
+  top: 200px;
+  width: 820px;
+  height: 600px;
+  overflow: visible;
+  transform: rotate(-0.8deg);
+}
+
+.boceto text {
+  fill: var(--hof);
+}
+
+.boceto .tinta {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.boceto .marco {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.boceto .gris {
+  fill: #E3DED8;
+}
+
+.boceto .suave {
+  fill: var(--foggy);
+}
+
+.boceto .estrella {
+  fill: var(--rausch);
+}
+
+.boceto__aviso {
+  position: absolute;
+  left: 990px;
+  top: 816px;
+  font-size: var(--t-pie);
+  font-style: italic;
+  color: var(--foggy);
+}
+
+/* Nota del MVP pegada sobre el boceto */
+.mvp-nota {
+  position: absolute;
+  left: 1556px;
+  top: 128px;
+  box-sizing: border-box;
+  width: 270px;
+  padding: 22px 24px;
+  background: #FFE4D6;
+  box-shadow: 0 10px 22px -14px rgba(60, 40, 20, 0.45);
+  transform: rotate(4deg);
+}
+
+.mvp-nota strong {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.mvp-nota span {
+  display: block;
+  margin-top: 4px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+/* Sello final */
+.sello {
+  position: absolute;
+  left: 1030px;
+  top: 376px;
+  padding: 6px 18px 8px;
+  border: 5px solid var(--rausch);
+  border-radius: 10px;
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  color: var(--rausch);
+  background: rgba(255, 255, 255, 0.55);
+  transform: rotate(-9deg);
+}

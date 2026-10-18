@@ -145,10 +145,19 @@ section.estilo-corporativo {
     0 24px 48px -20px rgba(60, 40, 20, 0.38);
 }
 
-.polaroid svg {
+.polaroid svg,
+.polaroid img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+/* Fotos reales: recorte casi cuadrado y un leve tono de foto instantánea */
+.polaroid img {
+  aspect-ratio: 1 / 0.92;
+  object-fit: cover;
+  object-position: 50% 25%;
+  filter: saturate(0.9) contrast(1.04) sepia(0.08);
 }
 
 .polaroid figcaption {

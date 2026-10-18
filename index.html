@@ -12,7 +12,17 @@
   <link rel="stylesheet" href="vendor/reveal/reveal.css">
   <link rel="stylesheet" href="vendor/fuentes/plus-jakarta-sans.css">
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/linea-tiempo.css">
   <link rel="stylesheet" href="css/diapositivas/01-portada.css">
+  <link rel="stylesheet" href="css/diapositivas/02-origen.css">
+  <link rel="stylesheet" href="css/diapositivas/03-problema.css">
+  <link rel="stylesheet" href="css/diapositivas/04-mvp.css">
+  <link rel="stylesheet" href="css/diapositivas/05-valle.css">
+  <link rel="stylesheet" href="css/diapositivas/06-potencio.css">
+  <link rel="stylesheet" href="css/diapositivas/07-modelo.css">
+  <link rel="stylesheet" href="css/diapositivas/08-crecimiento.css">
+  <link rel="stylesheet" href="css/diapositivas/09-reflexion.css">
+  <link rel="stylesheet" href="css/diapositivas/10-referencias.css">
 </head>
 <body>
   <div class="reveal">
@@ -48,92 +58,8 @@
 
         <figure class="polaroid portada__polaroid">
           <span class="cinta" aria-hidden="true"></span>
-          <svg class="portada__escena" viewBox="0 0 560 520" role="img" aria-label="Ilustración: tres colchones inflables en la sala de un apartamento de San Francisco, con el puente Golden Gate en la ventana">
-            <defs>
-              <linearGradient id="portada-cielo" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#8ED2CA"/>
-                <stop offset="1" stop-color="#FCE6D6"/>
-              </linearGradient>
-            </defs>
-
-            <!-- Pared y aviso pegado -->
-            <rect width="560" height="334" fill="#F1ECE5"/>
-            <g transform="rotate(-4 140 130)">
-              <rect x="44" y="78" width="196" height="104" fill="#FFFFFF"/>
-              <rect class="tinta" x="44" y="78" width="196" height="104"/>
-              <text x="142" y="122" text-anchor="middle" font-size="27" font-weight="800" fill="#484848">AirBed &amp;</text>
-              <text x="142" y="156" text-anchor="middle" font-size="27" font-weight="800" fill="#484848">Breakfast</text>
-              <rect x="112" y="64" width="60" height="22" fill="rgba(252,100,45,0.45)" transform="rotate(6 142 75)"/>
-            </g>
-
-            <!-- Ventana con el Golden Gate entre la niebla -->
-            <g>
-              <rect x="318" y="34" width="200" height="210" fill="url(#portada-cielo)"/>
-              <path d="M318 214 Q 360 186 412 204 T 518 196 V244 H318 Z" fill="#5FB3A8"/>
-              <rect x="318" y="222" width="200" height="22" fill="#9ED6CF"/>
-              <path d="M318 152 Q 341 178 362 120 Q 416 206 470 120 Q 494 172 518 150" fill="none" stroke="#FC642D" stroke-width="3"/>
-              <path d="M357 120 h10 v100 h-10 Z M465 120 h10 v100 h-10 Z" fill="#FC642D"/>
-              <path d="M357 142 h10 M357 170 h10 M465 142 h10 M465 170 h10" stroke="#F1ECE5" stroke-width="3"/>
-              <rect x="318" y="206" width="200" height="7" fill="#FC642D"/>
-              <ellipse cx="380" cy="186" rx="70" ry="13" fill="rgba(255,255,255,0.75)"/>
-              <ellipse cx="482" cy="176" rx="56" ry="11" fill="rgba(255,255,255,0.65)"/>
-              <path d="M418 34 V244 M318 140 H518" stroke="#FFFFFF" stroke-width="7"/>
-              <rect class="tinta" x="318" y="34" width="200" height="210"/>
-              <rect x="306" y="244" width="224" height="12" fill="#FFFFFF"/>
-              <rect class="tinta" x="306" y="244" width="224" height="12"/>
-            </g>
-
-            <!-- Piso de madera -->
-            <rect y="334" width="560" height="186" fill="#E8CBA8"/>
-            <path d="M0 368 H560 M0 410 H560 M0 462 H560 M0 510 H560 M150 334 V368 M392 334 V368 M70 368 V410 M300 368 V410 M500 368 V410 M210 410 V462 M430 410 V462 M120 462 V510 M350 462 V510" stroke="#D5AE84" stroke-width="2.5"/>
-            <rect y="324" width="560" height="12" fill="#FFFFFF"/>
-            <path class="tinta" d="M0 324 H560 M0 336 H560"/>
-
-            <!-- Los tres colchones (se inflan con la animación) -->
-            <g transform="translate(98 0)">
-              <g class="colchon">
-                <ellipse cx="0" cy="497" rx="84" ry="7" fill="rgba(72,72,72,0.12)"/>
-                <path d="M-66 458 H66 Q79 458 79 472 Q79 492 64 492 Q 51.2 500 38.4 492 Q 25.6 500 12.8 492 Q 0.0 500 -12.8 492 Q -25.6 500 -38.4 492 Q -51.2 500 -64 492 Q-79 492 -79 472 Q-79 458 -66 458 Z" fill="#E2474C"/>
-                <path d="M-46 398 H46 Q62 398 64 412 L77 450 Q80 464 64 464 H-64 Q-80 464 -77 450 L-64 412 Q-62 398 -46 398 Z" fill="#FF5A5F"/>
-                <path d="M-32 400 L-39 462 M-11 400 L-13 462 M11 400 L13 462 M32 400 L39 462" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
-                <path d="M-38.4 464 V490 M-12.8 464 V492 M12.8 464 V492 M38.4 464 V490" stroke="rgba(72,72,72,0.3)" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M-34 405 H34 Q46 405 46 417 V423 Q46 435 34 435 H-34 Q-46 435 -46 423 V417 Q-46 405 -34 405 Z" fill="#FFFFFF"/>
-                <path class="tinta" d="M-46 398 H46 Q62 398 64 412 L77 450 Q80 464 64 464 H-64 Q-80 464 -77 450 L-64 412 Q-62 398 -46 398 Z"/>
-                <path class="tinta" d="M-66 458 H66 Q79 458 79 472 Q79 492 64 492 Q 51.2 500 38.4 492 Q 25.6 500 12.8 492 Q 0.0 500 -12.8 492 Q -25.6 500 -38.4 492 Q -51.2 500 -64 492 Q-79 492 -79 472 Q-79 458 -66 458 Z"/>
-                <path class="tinta" d="M-34 405 H34 Q46 405 46 417 V423 Q46 435 34 435 H-34 Q-46 435 -46 423 V417 Q-46 405 -34 405 Z"/>
-                <path class="soplo" d="M-24 384 q-8 -12 0 -24 M0 378 q-8 -14 0 -28 M24 384 q-8 -12 0 -24"/>
-              </g>
-            </g>
-            <g transform="translate(280 0)">
-              <g class="colchon">
-                <ellipse cx="0" cy="497" rx="84" ry="7" fill="rgba(72,72,72,0.12)"/>
-                <path d="M-66 458 H66 Q79 458 79 472 Q79 492 64 492 Q 51.2 500 38.4 492 Q 25.6 500 12.8 492 Q 0.0 500 -12.8 492 Q -25.6 500 -38.4 492 Q -51.2 500 -64 492 Q-79 492 -79 472 Q-79 458 -66 458 Z" fill="#008A7F"/>
-                <path d="M-46 398 H46 Q62 398 64 412 L77 450 Q80 464 64 464 H-64 Q-80 464 -77 450 L-64 412 Q-62 398 -46 398 Z" fill="#00A699"/>
-                <path d="M-32 400 L-39 462 M-11 400 L-13 462 M11 400 L13 462 M32 400 L39 462" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
-                <path d="M-38.4 464 V490 M-12.8 464 V492 M12.8 464 V492 M38.4 464 V490" stroke="rgba(72,72,72,0.3)" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M-34 405 H34 Q46 405 46 417 V423 Q46 435 34 435 H-34 Q-46 435 -46 423 V417 Q-46 405 -34 405 Z" fill="#FFFFFF"/>
-                <path class="tinta" d="M-46 398 H46 Q62 398 64 412 L77 450 Q80 464 64 464 H-64 Q-80 464 -77 450 L-64 412 Q-62 398 -46 398 Z"/>
-                <path class="tinta" d="M-66 458 H66 Q79 458 79 472 Q79 492 64 492 Q 51.2 500 38.4 492 Q 25.6 500 12.8 492 Q 0.0 500 -12.8 492 Q -25.6 500 -38.4 492 Q -51.2 500 -64 492 Q-79 492 -79 472 Q-79 458 -66 458 Z"/>
-                <path class="tinta" d="M-34 405 H34 Q46 405 46 417 V423 Q46 435 34 435 H-34 Q-46 435 -46 423 V417 Q-46 405 -34 405 Z"/>
-                <path class="soplo" d="M-24 384 q-8 -12 0 -24 M0 378 q-8 -14 0 -28 M24 384 q-8 -12 0 -24"/>
-              </g>
-            </g>
-            <g transform="translate(462 0)">
-              <g class="colchon">
-                <ellipse cx="0" cy="497" rx="84" ry="7" fill="rgba(72,72,72,0.12)"/>
-                <path d="M-66 458 H66 Q79 458 79 472 Q79 492 64 492 Q 51.2 500 38.4 492 Q 25.6 500 12.8 492 Q 0.0 500 -12.8 492 Q -25.6 500 -38.4 492 Q -51.2 500 -64 492 Q-79 492 -79 472 Q-79 458 -66 458 Z" fill="#DA4E1B"/>
-                <path d="M-46 398 H46 Q62 398 64 412 L77 450 Q80 464 64 464 H-64 Q-80 464 -77 450 L-64 412 Q-62 398 -46 398 Z" fill="#FC642D"/>
-                <path d="M-32 400 L-39 462 M-11 400 L-13 462 M11 400 L13 462 M32 400 L39 462" stroke="rgba(255,255,255,0.55)" stroke-width="3" stroke-linecap="round"/>
-                <path d="M-38.4 464 V490 M-12.8 464 V492 M12.8 464 V492 M38.4 464 V490" stroke="rgba(72,72,72,0.3)" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M-34 405 H34 Q46 405 46 417 V423 Q46 435 34 435 H-34 Q-46 435 -46 423 V417 Q-46 405 -34 405 Z" fill="#FFFFFF"/>
-                <path class="tinta" d="M-46 398 H46 Q62 398 64 412 L77 450 Q80 464 64 464 H-64 Q-80 464 -77 450 L-64 412 Q-62 398 -46 398 Z"/>
-                <path class="tinta" d="M-66 458 H66 Q79 458 79 472 Q79 492 64 492 Q 51.2 500 38.4 492 Q 25.6 500 12.8 492 Q 0.0 500 -12.8 492 Q -25.6 500 -38.4 492 Q -51.2 500 -64 492 Q-79 492 -79 472 Q-79 458 -66 458 Z"/>
-                <path class="tinta" d="M-34 405 H34 Q46 405 46 417 V423 Q46 435 34 435 H-34 Q-46 435 -46 423 V417 Q-46 405 -34 405 Z"/>
-                <path class="soplo" d="M-24 384 q-8 -12 0 -24 M0 378 q-8 -14 0 -28 M24 384 q-8 -12 0 -24"/>
-              </g>
-            </g>
-          </svg>
-          <figcaption>San Francisco, octubre de 2007</figcaption>
+          <img class="portada__foto" src="assets/fotos/colchones-2007.jpg" alt="Recreación: tres jóvenes sobre colchones inflables en un apartamento de San Francisco con un cartel de AirBeds &amp; Breakfast a USD 80 la noche">
+          <figcaption>San Francisco, 2007 <small>(recreación)</small></figcaption>
         </figure>
 
         <p class="pie-fuente">Fuente: Airbnb, Form S-1 ante la SEC (2020)</p>
@@ -151,84 +77,731 @@
       </section>
 
       <!-- 2 · El origen · Karly ------------------------------------------- -->
-      <section class="estilo-cuaderno">
-        <div class="pendiente">
-          <h2>El origen (2007–2008)</h2>
-          <p>Diapositiva 2 · Se construye en la Fase 3.</p>
+      <section class="estilo-cuaderno origen" data-animacion="origen" data-auto-animate>
+        <h2 class="origen__titulo">El origen <span>2007–2008</span></h2>
+
+        <div class="ficha">
+          <span class="cinta" aria-hidden="true"></span>
+          <img class="ficha__logo" src="assets/logo/airbnb-logo-completo.svg" alt="Airbnb">
+          <dl>
+            <dt>Origen</dt><dd>San Francisco, EE. UU.</dd>
+            <dt>Sector</dt><dd>Turismo y alojamiento</dd>
+            <dt>Producto</dt><dd>Plataforma digital</dd>
+            <dt>Fundación</dt><dd>2007–2008</dd>
+          </dl>
         </div>
-        <aside class="notes"><p><strong>Expone: Karly Alexa Puentes Moreno</strong> · Tiempo: 1:45</p></aside>
+
+        <div class="fundadores">
+          <figure class="polaroid fundador">
+            <img src="assets/fundadores/brian-chesky.jpg" alt="Fotografía de Brian Chesky">
+            <figcaption><strong>Brian Chesky</strong><span>diseñador</span></figcaption>
+          </figure>
+          <figure class="polaroid fundador">
+            <img src="assets/fundadores/joe-gebbia.jpg" alt="Fotografía de Joe Gebbia">
+            <figcaption><strong>Joe Gebbia</strong><span>diseñador</span></figcaption>
+          </figure>
+          <figure class="polaroid fundador">
+            <img src="assets/fundadores/nathan-blecharczyk.jpg" alt="Fotografía de Nathan Blecharczyk">
+            <figcaption><strong>Nathan Blecharczyk</strong><span>ingeniero (2008)</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="linea-tiempo" data-id="linea-tiempo">
+          <svg class="linea-tiempo__dibujo" viewBox="0 180 1920 120" aria-hidden="true">
+            <path class="linea-tiempo__ruta" id="origen-ruta" d="M220 242 C 420 228, 600 254, 800 240 S 1200 226, 1400 242 S 1660 246, 1780 236"/>
+            <path class="linea-tiempo__sigue" d="M1812 235 L1900 231"/>
+            <g class="linea-tiempo__marca" data-hito="1"><path d="M412 190 V 220"/><circle cx="400" cy="239" r="16"/><circle class="relleno" cx="400" cy="239" r="7"/></g>
+            <g class="linea-tiempo__marca" data-hito="2"><path d="M1000 192 V 218"/><circle cx="1000" cy="236" r="16"/><circle class="relleno" cx="1000" cy="236" r="7"/></g>
+            <g class="linea-tiempo__marca" data-hito="3"><path d="M1590 190 V 222"/><circle cx="1600" cy="242" r="16"/><circle class="relleno" cx="1600" cy="242" r="7"/></g>
+            <g class="avion" transform="translate(1780 236)">
+              <path d="M34 0 L-30 -18 L-16 0 L-30 18 Z"/>
+              <path d="M-16 0 L34 0"/>
+            </g>
+          </svg>
+
+          <p class="nota" data-hito="1"><strong>3 huéspedes</strong><span>a USD 80 la noche, con los hoteles llenos por una conferencia de diseño</span></p>
+          <p class="nota" data-hito="2"><strong>2 reservas</strong><span>en el lanzamiento oficial, durante el festival SXSW</span></p>
+          <p class="nota" data-hito="3"><strong>80 reservas</strong><span>en la Convención Demócrata; estrenan pagos dentro de la plataforma</span></p>
+
+          <p class="fecha" data-hito="1"><strong>Octubre de 2007</strong><span>San Francisco</span></p>
+          <p class="fecha" data-hito="2"><strong>Marzo de 2008</strong><span>Austin</span></p>
+          <p class="fecha" data-hito="3"><strong>Agosto de 2008</strong><span>Denver</span></p>
+        </div>
+
+        <p class="pie-fuente">Fuentes: Airbnb, Form S-1 ante la SEC (2020); Airbnb Newsroom, «About us» (2026); Newsweek (24-ago-2026)</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Karly Alexa Puentes Moreno</strong> · Tiempo: 1:45</p>
+          <ul>
+            <li>Ficha: Airbnb nace en San Francisco, Estados Unidos; sector turismo y alojamiento; su producto es una plataforma digital.</li>
+            <li>Fundadores: Brian Chesky y Joe Gebbia, dos diseñadores; en 2008 se une Nathan Blecharczyk, ingeniero de software (Form S-1).</li>
+            <li>Cita de Joe Gebbia en TED (2016): «Estoy desempleado, casi en quiebra. Mi compañero se va y el arriendo sube. Y llega una conferencia de diseño con todos los hoteles llenos».</li>
+            <li>Ofrecieron colchón inflable, wifi, escritorio y desayuno: de ahí el nombre <em>AirBed &amp; Breakfast</em>. Cada colchón les costó USD 20.</li>
+            <li>El S-1 lo cuenta así: «dos diseñadores tratando de resolver un problema: cómo pagar el arriendo».</li>
+            <li>Año: los primeros huéspedes son de 2007 y el lanzamiento oficial de 2008; por eso algunas fuentes dicen 2008.</li>
+            <li>Línea de tiempo: octubre de 2007, 3 huéspedes a USD 80 la noche; marzo de 2008, lanzamiento en SXSW con solo 2 reservas; agosto de 2008, 80 reservas en la Convención Demócrata y estrenan pagos dentro de la plataforma.</li>
+            <li>Remate (puente a Sebastian): las reservas llegaban solo con grandes eventos. Paul Graham lo resume: «después de trabajar un año en la empresa sin crecimiento».</li>
+          </ul>
+          <p>Fuentes: Airbnb, Form S-1 (2020); Airbnb Newsroom (2026); Newsweek (2026); NPR/TED (2016); P. Graham, «The Airbnbs» (2020).</p>
+        </aside>
       </section>
 
       <!-- 3 · Problema y público objetivo · Karly -------------------------- -->
-      <section class="estilo-cuaderno">
-        <div class="pendiente">
-          <h2>Un problema con dos lados</h2>
-          <p>Diapositiva 3 · Se construye en la Fase 3.</p>
+      <section class="estilo-cuaderno problema" data-animacion="problema" data-auto-animate>
+        <h2 class="problema__titulo">Un problema con dos lados</h2>
+
+        <!-- Huéspedes y anfitriones: stickers aportados por el equipo (assets/problema/) -->
+        <img class="problema__huesped" src="assets/problema/huespedes.png" alt="Fotografía: una pareja de viajeros con su maleta">
+
+        <img class="problema__anfitrion" src="assets/problema/anfitriones.png" alt="Fotografía: una familia anfitriona frente a su casa">
+
+        <!-- Conexión entre los dos lados -->
+        <svg class="problema__lazos" viewBox="0 0 1920 1080" aria-hidden="true">
+          <path class="lazo-huesped" d="M534 432 C 590 404, 640 404, 686 418"/>
+          <path class="lazo-anfitrion" d="M874 418 C 918 400, 956 400, 990 414"/>
+        </svg>
+        <span class="problema__pregunta" aria-hidden="true">?</span>
+        <div class="problema__plataforma">
+          <img src="assets/logo/airbnb-icono.svg" alt="Airbnb">
         </div>
-        <aside class="notes"><p><strong>Expone: Karly Alexa Puentes Moreno</strong> · Tiempo: 1:40</p></aside>
+        <p class="problema__conecta">Airbnb los conecta</p>
+
+        <div class="problema__lado problema__lado--huesped">
+          <h3>Huéspedes</h3>
+          <p>Viajeros que necesitan dónde quedarse cuando los hoteles se llenan.</p>
+        </div>
+        <div class="problema__lado problema__lado--anfitrion">
+          <h3>Anfitriones</h3>
+          <p>Personas con un espacio libre que quieren ingresos extra.</p>
+        </div>
+
+        <p class="problema__circulo">
+          <svg viewBox="0 0 54 54" aria-hidden="true">
+            <path d="M8 26 A 19 19 0 0 1 41 13"/><path d="M33 9 L 42 13 L 38 22"/>
+            <path d="M46 28 A 19 19 0 0 1 13 41"/><path d="M21 45 L 12 41 L 16 32"/>
+          </svg>
+          Sin anfitriones no llegan huéspedes, y sin huéspedes nadie publica.
+        </p>
+
+        <div class="quien-paga">
+          <span class="cinta" aria-hidden="true"></span>
+          <h3>¿Quién usa?</h3>
+          <p>Los dos lados: huéspedes y anfitriones.</p>
+          <h3>¿Quién paga?</h3>
+          <p>El huésped paga la reserva. Airbnb se queda con una comisión de uno o de ambos lados.</p>
+          <p class="ver">Detalle en la diapositiva 7</p>
+        </div>
+
+        <div class="linea-tiempo linea-tiempo--compacta" data-id="linea-tiempo">
+          <svg class="linea-tiempo__dibujo" viewBox="0 180 1920 120" aria-hidden="true">
+            <path class="linea-tiempo__ruta" d="M220 238 C 700 230, 1300 246, 1780 238"/>
+            <path class="linea-tiempo__sigue" d="M1812 238 L1900 236"/>
+            <g class="avion" transform="translate(1780 238)">
+              <path d="M34 0 L-30 -18 L-16 0 L-30 18 Z"/>
+              <path d="M-16 0 L34 0"/>
+            </g>
+          </svg>
+          <span class="punto punto--actual" data-id="lt-p1" style="left: 400px"></span>
+          <span class="punto" data-id="lt-p2" style="left: 1000px"></span>
+          <span class="punto" data-id="lt-p3" style="left: 1600px"></span>
+          <p class="etiqueta etiqueta--actual" data-id="lt-e1" style="left: 400px">Oct. 2007</p>
+          <p class="etiqueta" data-id="lt-e2" style="left: 1000px">Mar. 2008</p>
+          <p class="etiqueta" data-id="lt-e3" style="left: 1600px">Ago. 2008</p>
+        </div>
+
+        <p class="pie-fuente">Fuentes: Airbnb, Form S-1 (2020) y 10-K 2025 (2026); P. Graham, «Do Things that Don't Scale» (2013)</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Karly Alexa Puentes Moreno</strong> · Tiempo: 1:40</p>
+          <ul>
+            <li>Airbnb es un <strong>mercado de dos lados</strong> (marketplace): no tiene habitaciones propias; su producto es el encuentro entre quien viaja y quien tiene un espacio.</li>
+            <li>Huéspedes: en 2007, durante la conferencia de diseño, «cada hotel estaba lleno» (Form S-1). Anfitriones: personas con un espacio libre que quieren ingresos extra, como los mismos fundadores, que no tenían para el arriendo.</li>
+            <li>¿Quién usa y quién paga? Los dos lados <em>usan</em> la plataforma, pero el dinero entra por la reserva del huésped, y de ahí Airbnb se queda con su comisión (10-K 2025: las tarifas de servicio son un porcentaje del valor de la reserva). Camilo lo explica en la diapositiva 7.</li>
+            <li>El problema del huevo y la gallina: sin anfitriones no llegan huéspedes y sin huéspedes nadie publica. Paul Graham (Y Combinator): «los marketplaces son tan difíciles de arrancar que al principio hay que tomar medidas heroicas». Eso es lo que veremos en las diapositivas 5 y 6.</li>
+            <li>Por qué es de base tecnológica (requisito de la guía): sin la plataforma —búsqueda, perfiles, reseñas, pagos— no hay negocio. No es «vender por internet»: la tecnología es la que hace posible confiar en un desconocido. (Puente a Sebastian.)</li>
+          </ul>
+          <p>Fuentes: Airbnb, Form S-1 (2020); Airbnb, 10-K año fiscal 2025 (2026); P. Graham, «Do Things that Don't Scale» (2013).</p>
+        </aside>
       </section>
 
       <!-- 4 · El MVP y la tecnología · Sebastian ------------------------- -->
-      <section class="estilo-cuaderno">
-        <div class="pendiente">
-          <h2>El producto real: la confianza</h2>
-          <p>Diapositiva 4 · Se construye en la Fase 3.</p>
+      <section class="estilo-cuaderno mvp" data-animacion="mvp" data-auto-animate>
+        <h2 class="mvp__titulo">El producto real: la confianza</h2>
+
+        <p class="mvp__pregunta">¿Dejarías entrar a un desconocido a tu casa?</p>
+
+        <div class="mvp__valor">
+          <h3>Propuesta de valor</h3>
+          <p><strong>Huésped:</strong> un lugar donde quedarse, con alguien local.</p>
+          <p><strong>Anfitrión:</strong> ingresos con un espacio que ya tiene.</p>
         </div>
-        <aside class="notes"><p><strong>Expone: Sebastian Villanueva Mosquera</strong> · Tiempo: 1:30</p></aside>
+
+        <blockquote class="mvp__cita">
+          <p>«Un sistema de reputación bien diseñado es clave para construir confianza.»</p>
+          <footer>Joe Gebbia, cofundador, en TED (2016)</footer>
+        </blockquote>
+
+        <!-- Boceto de la página: sus etiquetas son las cuatro piezas de la confianza -->
+        <svg class="boceto" viewBox="0 0 820 600" role="img" aria-label="Boceto de una página de alojamiento con perfil con foto, reseñas de ambos lados, mensajes y pago dentro del sitio">
+          <g class="wf-marco">
+            <path d="M28 10 H792 Q810 10 810 28 V572 Q810 590 792 590 H28 Q10 590 10 572 V28 Q10 10 28 10 Z" fill="#FFFFFF"/>
+            <path class="marco" d="M28 10 H792 Q810 10 810 28 V572 Q810 590 792 590 H28 Q10 590 10 572 V28 Q10 10 28 10 Z M10 64 H810"/>
+            <circle class="tinta" cx="40" cy="37" r="8"/>
+            <circle class="tinta" cx="66" cy="37" r="8"/>
+            <circle class="tinta" cx="92" cy="37" r="8"/>
+            <rect x="124" y="20" width="420" height="34" rx="17" fill="#F4F1EC"/>
+            <rect class="tinta" x="124" y="20" width="420" height="34" rx="17"/>
+            <text class="suave" x="146" y="44" font-size="20" font-weight="600">airbedandbreakfast.com</text>
+          </g>
+
+          <g class="wf-pieza" data-paso="0">
+            <rect x="36" y="88" width="360" height="230" rx="10" fill="#F1ECE5"/>
+            <rect x="36" y="250" width="360" height="68" fill="#E8CBA8"/>
+            <rect x="262" y="104" width="112" height="96" fill="#8ED2CA"/>
+            <path class="tinta" d="M262 104 h112 v96 h-112 Z M318 104 V 200 M262 152 H 374"/>
+            <path d="M74 262 H230 Q242 262 242 272 V280 Q242 292 230 292 H74 Q62 292 62 280 V272 Q62 262 74 262 Z" fill="#FF5A5F"/>
+            <path d="M84 254 H128 Q136 254 136 262 V266 H76 V262 Q76 254 84 254 Z" fill="#FFFFFF"/>
+            <path class="tinta" d="M74 262 H230 Q242 262 242 272 V280 Q242 292 230 292 H74 Q62 292 62 280 V272 Q62 262 74 262 Z"/>
+            <rect class="tinta" x="36" y="88" width="360" height="230" rx="10"/>
+            <text x="420" y="120" font-size="30" font-weight="800">Colchón inflable</text>
+            <text class="suave" x="420" y="152" font-size="22" font-weight="600">San Francisco</text>
+            <text x="420" y="196" font-size="26" font-weight="700">USD 80 por noche</text>
+          </g>
+
+          <g class="wf-pieza" data-paso="1">
+            <circle cx="452" cy="262" r="30" fill="#F1CBA7"/>
+            <path d="M424 256 C 424 236, 440 230, 454 231 C 470 232, 480 242, 480 258 C 472 246, 462 242, 450 243 C 438 244, 430 250, 424 256 Z" fill="#3B2F2A"/>
+            <circle cx="443" cy="264" r="3" fill="#484848"/>
+            <circle cx="461" cy="264" r="3" fill="#484848"/>
+            <path class="tinta" d="M444 276 q 8 6 16 0"/>
+            <circle class="tinta" cx="452" cy="262" r="30"/>
+            <text x="498" y="256" font-size="24" font-weight="800">Perfil con foto</text>
+            <rect class="gris" x="498" y="270" width="210" height="12" rx="6"/>
+          </g>
+
+          <g class="wf-pieza" data-paso="2">
+            <g class="estrellas">
+              <path class="estrella" transform="translate(50 360)" d="M0 -15 L3.82 -5.26 L14.27 -4.64 L6.18 2.01 L8.82 12.14 L0 6.5 L-8.82 12.14 L-6.18 2.01 L-14.27 -4.64 L-3.82 -5.26 Z"/>
+              <path class="estrella" transform="translate(84 360)" d="M0 -15 L3.82 -5.26 L14.27 -4.64 L6.18 2.01 L8.82 12.14 L0 6.5 L-8.82 12.14 L-6.18 2.01 L-14.27 -4.64 L-3.82 -5.26 Z"/>
+              <path class="estrella" transform="translate(118 360)" d="M0 -15 L3.82 -5.26 L14.27 -4.64 L6.18 2.01 L8.82 12.14 L0 6.5 L-8.82 12.14 L-6.18 2.01 L-14.27 -4.64 L-3.82 -5.26 Z"/>
+              <path class="estrella" transform="translate(152 360)" d="M0 -15 L3.82 -5.26 L14.27 -4.64 L6.18 2.01 L8.82 12.14 L0 6.5 L-8.82 12.14 L-6.18 2.01 L-14.27 -4.64 L-3.82 -5.26 Z"/>
+              <path class="estrella" transform="translate(186 360)" d="M0 -15 L3.82 -5.26 L14.27 -4.64 L6.18 2.01 L8.82 12.14 L0 6.5 L-8.82 12.14 L-6.18 2.01 L-14.27 -4.64 L-3.82 -5.26 Z"/>
+            </g>
+            <text x="216" y="369" font-size="24" font-weight="800">Reseñas de ambos lados</text>
+            <circle cx="52" cy="404" r="14" fill="#00A699"/>
+            <text class="suave" x="76" y="411" font-size="20" font-weight="600">del huésped</text>
+            <rect class="gris" x="196" y="398" width="330" height="12" rx="6"/>
+            <circle cx="52" cy="442" r="14" fill="#FC642D"/>
+            <text class="suave" x="76" y="449" font-size="20" font-weight="600">del anfitrión</text>
+            <rect class="gris" x="196" y="436" width="260" height="12" rx="6"/>
+          </g>
+
+          <g class="wf-pieza" data-paso="3">
+            <rect x="36" y="490" width="342" height="64" rx="32" fill="#FFFFFF"/>
+            <rect class="tinta" x="36" y="490" width="342" height="64" rx="32"/>
+            <path class="tinta" d="M70 508 h30 a7 7 0 0 1 7 7 v12 a7 7 0 0 1 -7 7 h-16 l-9 8 v-8 h-5 a7 7 0 0 1 -7 -7 v-12 a7 7 0 0 1 7 -7 z"/>
+            <text x="120" y="531" font-size="24" font-weight="800">Escribir al anfitrión</text>
+          </g>
+
+          <g class="wf-pieza" data-paso="4">
+            <rect x="398" y="490" width="390" height="64" rx="32" fill="#FF5A5F"/>
+            <rect class="tinta" x="398" y="490" width="390" height="64" rx="32"/>
+            <rect x="430" y="520" width="24" height="19" rx="3" fill="#FFFFFF"/>
+            <path d="M436 520 V 513 a 6 6 0 0 1 12 0 V 520" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+            <text x="470" y="531" font-size="24" font-weight="800" style="fill: #FFFFFF">Pagar dentro del sitio</text>
+          </g>
+        </svg>
+
+        <div class="mvp-nota">
+          <span class="cinta" aria-hidden="true" style="top: -24px; left: 60px; width: 130px; height: 42px; transform: rotate(-5deg)"></span>
+          <strong>El MVP (2007)</strong>
+          <span>«un sitio web básico»</span>
+        </div>
+
+        <p class="boceto__aviso">Boceto ilustrativo: no es una captura del sitio original.</p>
+        <p class="sello" aria-hidden="true">CONFIANZA</p>
+
+        <div class="linea-tiempo linea-tiempo--compacta" data-id="linea-tiempo">
+          <svg class="linea-tiempo__dibujo" viewBox="0 180 1920 120" aria-hidden="true">
+            <path class="linea-tiempo__ruta" d="M220 238 C 700 230, 1300 246, 1780 238"/>
+            <path class="linea-tiempo__sigue" d="M1812 238 L1900 236"/>
+            <g class="avion" transform="translate(1780 238)">
+              <path d="M34 0 L-30 -18 L-16 0 L-30 18 Z"/>
+              <path d="M-16 0 L34 0"/>
+            </g>
+          </svg>
+          <span class="punto" data-id="lt-p1" style="left: 400px"></span>
+          <span class="punto punto--actual" data-id="lt-p2" style="left: 1000px"></span>
+          <span class="punto punto--actual" data-id="lt-p3" style="left: 1600px"></span>
+          <p class="etiqueta" data-id="lt-e1" style="left: 400px">Oct. 2007</p>
+          <p class="etiqueta etiqueta--actual" data-id="lt-e2" style="left: 1000px">Mar. 2008</p>
+          <p class="etiqueta etiqueta--actual" data-id="lt-e3" style="left: 1600px">Ago. 2008</p>
+        </div>
+
+        <p class="pie-fuente">Fuentes: Airbnb, Form S-1 (2020); J. Gebbia en TED, transcripción de NPR (2016); Airbnb Newsroom (2026)</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Sebastian Villanueva Mosquera</strong> · Tiempo: 1:30</p>
+          <ul>
+            <li>Arranque: «¿Dejarías entrar a un desconocido a tu casa?». Gebbia: «nos chocamos con uno de los sesgos más profundos: desde niños nos enseñan que desconocido es igual a peligro». Por eso también los rechazaron los inversionistas (diapositiva 5).</li>
+            <li>El MVP: «construimos un sitio web básico», airbedandbreakfast.com (Gebbia en TED; Form S-1). En 2008 se une Nathan Blecharczyk, ingeniero de software, para convertirlo en plataforma.</li>
+            <li>La tecnología no es solo la página: es el sistema que reduce el riesgo de confiar. Las cuatro piezas del boceto: perfil con foto, reseñas de los dos lados, mensajes dentro de la plataforma y pagos dentro de la plataforma (Airbnb lanzó su sistema de pagos propio en agosto de 2008; en 2019 procesó cerca de USD 70.000 millones, según su sala de prensa).</li>
+            <li>Aclarar que el boceto es ilustrativo, no una captura del sitio de la época.</li>
+            <li>Diferenciación: Gebbia dice que «había muchos sitios web como el nuestro que hacían exactamente lo mismo»; según él, la diferencia fue entender los componentes de la confianza y diseñar para ellos. Es la opinión de un fundador: decirlo así.</li>
+            <li>Ejemplo del diseño: hasta el tamaño de la caja de mensajes se pensó para que el huésped cuente lo justo; mensajes muy cortos o larguísimos reducían la aceptación (Gebbia).</li>
+            <li>Propuesta de valor: el huésped consigue dónde quedarse, con alguien local; el anfitrión gana ingresos con un espacio que ya tiene.</li>
+          </ul>
+          <p>Fuentes: Airbnb, Form S-1 (2020); NPR/TED Radio Hour, «Joe Gebbia: How Do You "Design" Trust Between Strangers?» (2016); Airbnb Newsroom, «About us» (2026).</p>
+        </aside>
       </section>
 
       <!-- 5 · El valle de la muerte · Sebastian -------------------------- -->
-      <section class="estilo-cuaderno">
-        <div class="pendiente">
-          <h2>El valle de la muerte</h2>
-          <p>Diapositiva 5 · Se construye en la Fase 3.</p>
+      <section class="estilo-cuaderno valle" data-animacion="valle" data-auto-animate>
+        <h2 class="valle__titulo">El valle de la muerte <span>2008–2009</span></h2>
+
+        <p class="valle__cero">0</p>
+        <p class="valle__inversionistas">inversionistas</p>
+        <p class="valle__ronda">Buscaban USD 150.000 por el 10 % de la empresa: una valoración de USD 1,5 millones.</p>
+
+        <div class="correos" aria-label="Correos de inversionistas que rechazaron la propuesta">
+          <div class="correo"><b>Re: AirBed &amp; Breakfast</b><small>De: inversionista</small><i></i><span class="no">NO</span></div>
+          <div class="correo"><b>Re: AirBed &amp; Breakfast</b><small>De: inversionista</small><i></i><span class="no">NO</span></div>
+          <div class="correo"><b>Re: AirBed &amp; Breakfast</b><small>De: inversionista</small><i></i><span class="no">NO</span></div>
+          <div class="correo"><b>Re: AirBed &amp; Breakfast</b><small>De: inversionista</small><i></i><span class="no">NO</span></div>
+          <div class="correo"><b>Re: AirBed &amp; Breakfast</b><small>De: inversionista</small><i></i><span class="no">NO</span></div>
         </div>
-        <aside class="notes"><p><strong>Expone: Sebastian Villanueva Mosquera</strong> · Tiempo: 1:30</p></aside>
+        <p class="valle__respuestas">De 7 inversionistas, 5 dijeron que no y 2 ni respondieron.</p>
+
+        <img class="cereal" src="assets/fotos/cajas-cereal.png" alt="Fotografía de las cajas de cereal Cap'n McCain's y Obama O's de 2008">
+        <p class="valle__cereal">Venden cereal de edición numerada: 500 cajas de cada una, a USD 40.</p>
+        <p class="valle__dinero">cerca de <strong>USD <span class="contador" data-valor="30000">30.000</span></strong></p>
+
+        <blockquote class="valle__cita">
+          <p>«Después de trabajar un año en la empresa sin conseguir crecimiento, acordaron darle una última oportunidad.»</p>
+          <footer>Paul Graham, cofundador de Y Combinator, «The Airbnbs» (2020)</footer>
+        </blockquote>
+
+        <div class="yc">
+          <span class="cinta" aria-hidden="true"></span>
+          <small>Enero de 2009</small>
+          <strong>Entran a Y Combinator</strong>
+          <span>USD 20.000 por el 6 %</span>
+        </div>
+
+        <div class="linea-tiempo linea-tiempo--compacta" data-id="linea-tiempo">
+          <svg class="linea-tiempo__dibujo" viewBox="0 180 1920 120" aria-hidden="true">
+            <path class="linea-tiempo__ruta" d="M220 238 C 700 230, 1300 246, 1780 238"/>
+            <path class="linea-tiempo__sigue" d="M1812 238 L1900 236"/>
+            <g class="avion" transform="translate(1780 238)">
+              <path d="M34 0 L-30 -18 L-16 0 L-30 18 Z"/>
+              <path d="M-16 0 L34 0"/>
+            </g>
+          </svg>
+          <span class="punto" data-id="lt-p1" style="left: 330px"></span>
+          <span class="punto" data-id="lt-p2" style="left: 640px"></span>
+          <span class="punto punto--actual" data-id="lt-p3" style="left: 950px"></span>
+          <span class="punto punto--actual" data-id="lt-p4" style="left: 1260px"></span>
+          <span class="punto" data-id="lt-p5" style="left: 1570px"></span>
+          <p class="etiqueta" data-id="lt-e1" style="left: 330px">Oct. 2007</p>
+          <p class="etiqueta" data-id="lt-e2" style="left: 640px">Mar. 2008</p>
+          <p class="etiqueta etiqueta--actual" data-id="lt-e3" style="left: 950px">Ago. 2008</p>
+          <p class="etiqueta etiqueta--actual" data-id="lt-e4" style="left: 1260px">Ene. 2009</p>
+          <p class="etiqueta" data-id="lt-e5" style="left: 1570px">Mar. 2009</p>
+        </div>
+
+        <p class="pie-fuente">Fuentes: VentureBeat (13-jul-2015); F. Wilson, AVC (2011); Crunchbase News (2020); P. Graham (2020); Y Combinator</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Sebastian Villanueva Mosquera</strong> · Tiempo: 1:30</p>
+          <ul>
+            <li>«Valle de la muerte»: el tramo en que una startup gasta más de lo que gana y no consigue inversión.</li>
+            <li>En 2008 buscaban USD 150.000 por el 10 % de la empresa (valoración de USD 1,5 millones). Chesky publicó en 2015 que de 7 inversionistas, 5 dijeron que no y 2 ni respondieron (VentureBeat).</li>
+            <li>Gebbia lo contó distinto: 20 contactos, 10 respondieron, 5 tomaron café con ellos y 0 invirtieron (TED/NPR, 2016). Las dos versiones coinciden en lo esencial: nadie invirtió.</li>
+            <li>Las cajas de cereal: ediciones numeradas para las elecciones de 2008, vendidas en la Convención Demócrata. Gebbia: «hicimos 500 de cada una… las Obama O's se agotaron; las Cap'n McCain's no se vendieron tan bien y terminamos comiéndolas para ahorrar en comida» (AVC, 2011). Recaudaron cerca de USD 30.000 (cifra reportada por Crunchbase News).</li>
+            <li>Paul Graham: llegaron a Y Combinator tras un año sin crecimiento; la idea no le convencía, pero «los fundadores tenían tanta energía que era imposible que no te cayeran bien». Y Combinator invirtió USD 20.000 por el 6 % (lote de invierno 2009).</li>
+            <li>Un inversionista que no les apostó, Fred Wilson, escribió: «nos enfocamos demasiado en lo que estaban haciendo en ese momento». Buen puente a la reflexión.</li>
+          </ul>
+          <p>Fuentes: Sawers, VentureBeat (2015); Chesky, «7 Rejections», Medium (2015); Wilson, AVC (2011); Kunthara, Crunchbase News (2020); Graham, «The Airbnbs» (2020); NPR/TED (2016); Y Combinator.</p>
+        </aside>
       </section>
 
       <!-- 6 · Lo que la potenció · Sebastian ----------------------------- -->
-      <section class="estilo-transicion">
-        <div class="pendiente">
-          <h2>Hacer cosas que no escalan</h2>
-          <p>Diapositiva 6 · Se construye en la Fase 3.</p>
+      <section class="estilo-transicion potencio" data-animacion="potencio" data-auto-animate>
+        <h2 class="potencio__titulo">«Hacer cosas que no escalan»</h2>
+        <p class="potencio__autor">El consejo de Paul Graham, de Y Combinator, que les cambió el rumbo en 2009</p>
+
+        <svg class="camara" viewBox="0 0 300 220" role="img" aria-label="Ilustración de una cámara fotográfica con flash">
+          <path class="destello" d="M262 30 L 290 4 M276 52 L 312 46 M248 22 L 252 -12 M270 68 L 300 84"/>
+          <rect x="88" y="34" width="112" height="40" rx="8" fill="#3A3A3A"/>
+          <rect x="212" y="40" width="54" height="26" rx="5" fill="#FFFFFF"/>
+          <rect class="tinta" x="212" y="40" width="54" height="26" rx="5"/>
+          <rect x="40" y="46" width="34" height="16" rx="4" fill="#FF5A5F"/>
+          <rect x="10" y="64" width="280" height="148" rx="20" fill="#484848"/>
+          <rect x="10" y="104" width="280" height="68" fill="#5C5C5C"/>
+          <rect class="tinta" x="10" y="64" width="280" height="148" rx="20"/>
+          <circle cx="150" cy="138" r="56" fill="#2E2522"/>
+          <circle cx="150" cy="138" r="40" fill="#6B6B6B"/>
+          <circle cx="150" cy="138" r="22" fill="#2E2522"/>
+          <circle cx="140" cy="128" r="8" fill="#A9D8D2"/>
+          <circle cx="150" cy="138" r="56" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.35"/>
+        </svg>
+
+        <figure class="polaroid foto-ny">
+          <span class="cinta" aria-hidden="true"></span>
+          <img class="foto-ny__escena" src="assets/fotos/apartamento-nueva-york.jpg" alt="Fotografía de un apartamento luminoso en Nueva York con vista a los edificios">
+          <figcaption>Nueva York <small>(foto ilustrativa)</small></figcaption>
+        </figure>
+
+        <p class="potencio__texto">Viajaron a Nueva York, visitaron a los anfitriones puerta a puerta y les tomaron fotos profesionales a sus espacios.</p>
+
+        <div class="barras" aria-label="Ingresos por semana: USD 200 antes de las fotos y USD 400 una semana después">
+          <p class="barras__valor barras__valor--antes">USD 200</p>
+          <p class="barras__valor barras__valor--despues">USD <span class="contador" data-valor="400">400</span></p>
+          <div class="barra barra--antes"></div>
+          <div class="barra barra--despues"></div>
+          <div class="barras__eje"></div>
+          <p class="barras__etiqueta barras__etiqueta--antes">antes</p>
+          <p class="barras__etiqueta barras__etiqueta--despues">una semana después</p>
+          <p class="barras__titulo">Ingresos de Airbnb por semana, en 2009</p>
         </div>
-        <aside class="notes"><p><strong>Expone: Sebastian Villanueva Mosquera</strong> · Tiempo: 1:35</p></aside>
+
+        <div class="hecho hecho--semilla">
+          <small>Capital semilla, 2009</small>
+          <strong>Sequoia Capital</strong>
+          <span>junto con Youniversity Ventures</span>
+        </div>
+        <div class="hecho hecho--nombre">
+          <small>Marzo de 2009</small>
+          <strong>Ahora se llama Airbnb</strong>
+          <span>Casas y apartamentos completos, no solo colchones</span>
+        </div>
+
+        <div class="flash" aria-hidden="true"></div>
+
+        <div class="linea-tiempo linea-tiempo--compacta" data-id="linea-tiempo">
+          <svg class="linea-tiempo__dibujo" viewBox="0 180 1920 120" aria-hidden="true">
+            <path class="linea-tiempo__ruta" d="M220 238 C 700 230, 1300 246, 1780 238"/>
+            <path class="linea-tiempo__sigue" d="M1812 238 L1900 236"/>
+            <g class="avion" transform="translate(1780 238)">
+              <path d="M34 0 L-30 -18 L-16 0 L-30 18 Z"/>
+              <path d="M-16 0 L34 0"/>
+            </g>
+          </svg>
+          <span class="punto" data-id="lt-p1" style="left: 330px"></span>
+          <span class="punto" data-id="lt-p2" style="left: 640px"></span>
+          <span class="punto" data-id="lt-p3" style="left: 950px"></span>
+          <span class="punto" data-id="lt-p4" style="left: 1260px"></span>
+          <span class="punto punto--actual" data-id="lt-p5" style="left: 1570px"></span>
+          <p class="etiqueta" data-id="lt-e1" style="left: 330px">Oct. 2007</p>
+          <p class="etiqueta" data-id="lt-e2" style="left: 640px">Mar. 2008</p>
+          <p class="etiqueta" data-id="lt-e3" style="left: 950px">Ago. 2008</p>
+          <p class="etiqueta" data-id="lt-e4" style="left: 1260px">Ene. 2009</p>
+          <p class="etiqueta etiqueta--actual" data-id="lt-e5" style="left: 1570px">Mar. 2009</p>
+        </div>
+
+        <p class="pie-fuente">Fuentes: P. Graham (2013 y 2020); First Round Review (4-feb-2015); VentureBeat (2010); Sequoia Capital; Airbnb Newsroom (2026)</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Sebastian Villanueva Mosquera</strong> · Tiempo: 1:35</p>
+          <ul>
+            <li>En Y Combinator revisaron con Paul Graham unos 40 anuncios de Nueva York. Gebbia: «lo que tenían en común era que las fotos eran malas» (First Round Review, 2015).</li>
+            <li>Graham les propuso algo que no escala: ir a Nueva York, alquilar una cámara y pasar tiempo con los clientes. Fueron puerta a puerta y fotografiaron los espacios.</li>
+            <li>Resultado: los ingresos, que llevaban meses estancados en USD 200 por semana, se duplicaron a USD 400 en una semana (First Round Review). Gebbia: fue «la primera vez que alguien nos dio permiso de hacer cosas que no escalan».</li>
+            <li>Paul Graham (2013): unos 30 días de salir a hablar en persona con los usuarios marcaron la diferencia entre el éxito y el fracaso. Y su consejo: enfocarse primero en el subconjunto «más caliente» del mercado, Nueva York (2020).</li>
+            <li>En 2009 entra Sequoia Capital como inversionista (capital semilla, junto a Youniversity Ventures). No damos el monto en pantalla: los USD 600.000 que se citan no los confirmamos en una fuente primaria.</li>
+            <li>Marzo de 2009: cambian el nombre a Airbnb y amplían la oferta de habitaciones a casas y apartamentos completos (Airbnb Newsroom).</li>
+            <li>Claves del éxito (análisis del grupo): decisiones (ir en persona, una sola ciudad, mejorar la calidad del anuncio); capacidades (dos diseñadores y un ingeniero); condiciones (Y Combinator y el capital semilla les dieron tiempo).</li>
+          </ul>
+          <p>Fuentes: Graham, «Do Things that Don't Scale» (2013) y «The Airbnbs» (2020); First Round Review (2015); Ha, VentureBeat (2010); Sequoia Capital; Airbnb Newsroom (2026).</p>
+        </aside>
       </section>
 
       <!-- 7 · Modelo de negocio · Camilo -------------------------------- -->
-      <section class="estilo-transicion">
-        <div class="pendiente">
-          <h2>Airbnb gana solo cuando hay una estadía</h2>
-          <p>Diapositiva 7 · Se construye en la Fase 3.</p>
+      <section class="estilo-transicion modelo" data-animacion="modelo">
+        <h2 class="modelo__titulo">Airbnb gana solo cuando hay una estadía</h2>
+        <p class="modelo__bajada">Sus ingresos son tarifas de servicio: un porcentaje del valor de cada reserva, que registra cuando el huésped llega.</p>
+
+        <svg class="flujo" viewBox="0 0 1920 1080" aria-hidden="true">
+          <path d="M600 354 H 826 M812 343 L 828 354 L 812 365 M936 354 H 1166 M1152 343 L 1168 354 L 1152 365"/>
+          <path d="M600 634 H 826 M812 623 L 828 634 L 812 645 M936 634 H 1166 M1152 623 L 1168 634 L 1152 645"/>
+        </svg>
+
+        <p class="fila__titulo fila__titulo--dividida">Tarifa dividida: <span>el huésped paga 14,1 %–16,5 % y el anfitrión ≈ 3 %</span></p>
+        <div class="fila fila--dividida">
+          <div class="nodo nodo--huesped">
+            <svg viewBox="0 0 76 76" aria-hidden="true"><path d="M28 18 V 10 H 48 V 18" fill="none" stroke="#484848" stroke-width="4" stroke-linejoin="round"/><rect x="12" y="18" width="52" height="50" rx="9" fill="#FC642D" stroke="#484848" stroke-width="4"/><path d="M26 22 V 64 M50 22 V 64" stroke="rgba(255,255,255,0.45)" stroke-width="5"/></svg>
+            <small>El huésped paga</small>
+            <strong>USD 114,10</strong>
+          </div>
+          <div class="nodo nodo--airbnb">
+            <span class="nodo__icono"><img src="assets/logo/airbnb-icono.svg" alt="Airbnb"></span>
+            <small>Airbnb recibe</small>
+            <strong>USD 17,10</strong>
+            <em>14,10 del huésped + 3,00 del anfitrión</em>
+          </div>
+          <div class="nodo nodo--anfitrion">
+            <svg viewBox="0 0 76 76" aria-hidden="true"><rect x="16" y="34" width="44" height="34" fill="#FFFFFF" stroke="#484848" stroke-width="4"/><path d="M8 38 L 38 10 L 68 38 Z" fill="#FF5A5F" stroke="#484848" stroke-width="4" stroke-linejoin="round"/><rect x="31" y="48" width="14" height="20" fill="#00A699" stroke="#484848" stroke-width="3"/></svg>
+            <small>El anfitrión recibe</small>
+            <strong>USD 97,00</strong>
+          </div>
+          <span class="moneda" data-fila="1" data-destino="airbnb" style="left: 600px; top: 354px"></span>
+          <span class="moneda" data-fila="1" style="left: 600px; top: 354px"></span>
+          <span class="moneda" data-fila="1" style="left: 600px; top: 354px"></span>
         </div>
-        <aside class="notes"><p><strong>Expone: Camilo Artunduaga Bueno</strong> · Tiempo: 1:35</p></aside>
+
+        <p class="fila__titulo fila__titulo--unica">Tarifa única: <span>solo paga el anfitrión, ≈ 15,5 %</span></p>
+        <div class="fila fila--unica">
+          <div class="nodo nodo--huesped">
+            <svg viewBox="0 0 76 76" aria-hidden="true"><path d="M28 18 V 10 H 48 V 18" fill="none" stroke="#484848" stroke-width="4" stroke-linejoin="round"/><rect x="12" y="18" width="52" height="50" rx="9" fill="#FC642D" stroke="#484848" stroke-width="4"/><path d="M26 22 V 64 M50 22 V 64" stroke="rgba(255,255,255,0.45)" stroke-width="5"/></svg>
+            <small>El huésped paga</small>
+            <strong>USD 100,00</strong>
+          </div>
+          <div class="nodo nodo--airbnb">
+            <span class="nodo__icono"><img src="assets/logo/airbnb-icono.svg" alt="Airbnb"></span>
+            <small>Airbnb recibe</small>
+            <strong>USD 15,50</strong>
+            <em>todo del lado del anfitrión</em>
+          </div>
+          <div class="nodo nodo--anfitrion">
+            <svg viewBox="0 0 76 76" aria-hidden="true"><rect x="16" y="34" width="44" height="34" fill="#FFFFFF" stroke="#484848" stroke-width="4"/><path d="M8 38 L 38 10 L 68 38 Z" fill="#FF5A5F" stroke="#484848" stroke-width="4" stroke-linejoin="round"/><rect x="31" y="48" width="14" height="20" fill="#00A699" stroke="#484848" stroke-width="3"/></svg>
+            <small>El anfitrión recibe</small>
+            <strong>USD 84,50</strong>
+          </div>
+          <span class="moneda" data-fila="2" data-destino="airbnb" style="left: 600px; top: 634px"></span>
+          <span class="moneda" data-fila="2" style="left: 600px; top: 634px"></span>
+          <span class="moneda" data-fila="2" style="left: 600px; top: 634px"></span>
+        </div>
+
+        <p class="modelo__nota">Ejemplo ilustrativo: reserva de USD 100 sin impuestos (tarifa dividida con 14,1 % + 3 %). Airbnb está pasando a todos los anfitriones de vivienda a la tarifa única. Tarifas publicadas por Airbnb, consultadas el 18 de octubre de 2026.</p>
+
+        <div class="captura">
+          <small>Lo que se queda Airbnb</small>
+          <strong>USD <span class="contador" data-valor="13">13</span></strong>
+          <p>de cada USD 100 reservados en 2025, aproximadamente.</p>
+          <p>Cálculo del grupo: ingresos de USD 12.241 millones ÷ USD 91.300 millones en reservas (valor bruto), según la carta a accionistas del cuarto trimestre de 2025.</p>
+        </div>
+
+        <p class="pie-fuente">Fuentes: Airbnb, 10-K 2025 y carta a accionistas Q4 2025 (12-feb-2026); Centro de ayuda de Airbnb, «Tarifas de servicio» (consultado el 18-oct-2026)</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Camilo Artunduaga Bueno</strong> · Tiempo: 1:35</p>
+          <ul>
+            <li>Modelo de comisión: según el 10-K de 2025, los ingresos son tarifas de servicio, un porcentaje del valor de la reserva (sin impuestos) que varía según el valor, la duración, el país y el tipo de anfitrión. Airbnb registra el ingreso al check-in: solo gana si la estadía ocurre.</li>
+            <li>Tarifa dividida: el huésped paga entre 14,1 % y 16,5 % y el anfitrión cerca de 3 %. Tarifa única: solo el anfitrión, cerca de 15,5 %. Airbnb está pasando a todos los anfitriones de vivienda a la tarifa única (centro de ayuda, consultado el 18 de octubre de 2026).</li>
+            <li>El ejemplo de USD 100 es ilustrativo: con tarifa dividida el huésped paga 114,10, Airbnb recibe 17,10 y el anfitrión 97,00; con tarifa única el huésped paga 100, Airbnb recibe 15,50 y el anfitrión 84,50.</li>
+            <li>Experiencias y servicios: solo pagan los anfitriones, cerca de 20 % y 15 %.</li>
+            <li>Cálculo del grupo: en 2025, ingresos de USD 12.241 millones sobre USD 91.300 millones en reservas: Airbnb se quedó con cerca de USD 13 de cada USD 100 reservados.</li>
+            <li>Análisis del grupo: Airbnb no es dueño de los alojamientos, así que crece sin comprar edificios; y como cobra solo cuando la estadía ocurre, le conviene que la experiencia salga bien, lo que conecta con la confianza (diapositiva 4).</li>
+            <li>Advertir que las comisiones cambian según el país y el tipo de anfitrión.</li>
+          </ul>
+          <p>Fuentes: Airbnb, Form 10-K año fiscal 2025 y carta a accionistas Q4 2025 (12 de febrero de 2026); Airbnb, Centro de ayuda, «Tarifas de servicio de Airbnb» (consultado el 18 de octubre de 2026).</p>
+        </aside>
       </section>
 
       <!-- 8 · Dificultades y crecimiento · Camilo ------------------------ -->
-      <section class="estilo-corporativo">
-        <div class="pendiente">
-          <h2>Dificultades y crecimiento</h2>
-          <p>Diapositiva 8 · Se construye en la Fase 3.</p>
+      <section class="estilo-corporativo crece" data-animacion="crece">
+        <img class="crece__logo" src="assets/logo/airbnb-logo-completo.svg" alt="Airbnb">
+        <p class="crece__antes">De 3 colchones inflables…</p>
+        <h2 class="crece__gancho">a más de 9 millones<br>de anuncios activos</h2>
+        <p class="crece__gancho-fuente">Airbnb Newsroom, mayo de 2026</p>
+
+        <svg class="edificios" viewBox="0 0 360 290" aria-hidden="true">
+          <g class="edificio"><rect x="0" y="162" width="50" height="120" rx="3" fill="#E4E4E4"/><g fill="rgba(255,255,255,0.45)"><rect x="10" y="178" width="8" height="12" rx="1"/><rect x="28" y="178" width="8" height="12" rx="1"/><rect x="10" y="204" width="8" height="12" rx="1"/><rect x="28" y="204" width="8" height="12" rx="1"/><rect x="10" y="230" width="8" height="12" rx="1"/><rect x="28" y="230" width="8" height="12" rx="1"/><rect x="10" y="256" width="8" height="12" rx="1"/><rect x="28" y="256" width="8" height="12" rx="1"/></g></g>
+          <g class="edificio"><rect x="56" y="92" width="64" height="190" rx="3" fill="#00A699"/><g fill="rgba(255,255,255,0.45)"><rect x="66" y="108" width="8" height="12" rx="1"/><rect x="84" y="108" width="8" height="12" rx="1"/><rect x="102" y="108" width="8" height="12" rx="1"/><rect x="66" y="134" width="8" height="12" rx="1"/><rect x="84" y="134" width="8" height="12" rx="1"/><rect x="102" y="134" width="8" height="12" rx="1"/><rect x="66" y="160" width="8" height="12" rx="1"/><rect x="84" y="160" width="8" height="12" rx="1"/><rect x="102" y="160" width="8" height="12" rx="1"/><rect x="66" y="186" width="8" height="12" rx="1"/><rect x="84" y="186" width="8" height="12" rx="1"/><rect x="102" y="186" width="8" height="12" rx="1"/><rect x="66" y="212" width="8" height="12" rx="1"/><rect x="84" y="212" width="8" height="12" rx="1"/><rect x="102" y="212" width="8" height="12" rx="1"/><rect x="66" y="238" width="8" height="12" rx="1"/><rect x="84" y="238" width="8" height="12" rx="1"/><rect x="102" y="238" width="8" height="12" rx="1"/><rect x="66" y="264" width="8" height="12" rx="1"/><rect x="84" y="264" width="8" height="12" rx="1"/><rect x="102" y="264" width="8" height="12" rx="1"/></g></g>
+          <g class="edificio"><rect x="126" y="132" width="56" height="150" rx="3" fill="#D0D0D0"/><g fill="rgba(255,255,255,0.45)"><rect x="136" y="148" width="8" height="12" rx="1"/><rect x="154" y="148" width="8" height="12" rx="1"/><rect x="136" y="174" width="8" height="12" rx="1"/><rect x="154" y="174" width="8" height="12" rx="1"/><rect x="136" y="200" width="8" height="12" rx="1"/><rect x="154" y="200" width="8" height="12" rx="1"/><rect x="136" y="226" width="8" height="12" rx="1"/><rect x="154" y="226" width="8" height="12" rx="1"/><rect x="136" y="252" width="8" height="12" rx="1"/><rect x="154" y="252" width="8" height="12" rx="1"/></g></g>
+          <g class="edificio"><rect x="188" y="20" width="74" height="262" rx="3" fill="#FF5A5F"/><g fill="rgba(255,255,255,0.45)"><rect x="198" y="36" width="8" height="12" rx="1"/><rect x="216" y="36" width="8" height="12" rx="1"/><rect x="234" y="36" width="8" height="12" rx="1"/><rect x="198" y="62" width="8" height="12" rx="1"/><rect x="216" y="62" width="8" height="12" rx="1"/><rect x="234" y="62" width="8" height="12" rx="1"/><rect x="198" y="88" width="8" height="12" rx="1"/><rect x="216" y="88" width="8" height="12" rx="1"/><rect x="234" y="88" width="8" height="12" rx="1"/><rect x="198" y="114" width="8" height="12" rx="1"/><rect x="216" y="114" width="8" height="12" rx="1"/><rect x="234" y="114" width="8" height="12" rx="1"/><rect x="198" y="140" width="8" height="12" rx="1"/><rect x="216" y="140" width="8" height="12" rx="1"/><rect x="234" y="140" width="8" height="12" rx="1"/><rect x="198" y="166" width="8" height="12" rx="1"/><rect x="216" y="166" width="8" height="12" rx="1"/><rect x="234" y="166" width="8" height="12" rx="1"/><rect x="198" y="192" width="8" height="12" rx="1"/><rect x="216" y="192" width="8" height="12" rx="1"/><rect x="234" y="192" width="8" height="12" rx="1"/><rect x="198" y="218" width="8" height="12" rx="1"/><rect x="216" y="218" width="8" height="12" rx="1"/><rect x="234" y="218" width="8" height="12" rx="1"/><rect x="198" y="244" width="8" height="12" rx="1"/><rect x="216" y="244" width="8" height="12" rx="1"/><rect x="234" y="244" width="8" height="12" rx="1"/></g></g>
+          <g class="edificio"><rect x="268" y="110" width="50" height="172" rx="3" fill="#FC642D"/><g fill="rgba(255,255,255,0.45)"><rect x="278" y="126" width="8" height="12" rx="1"/><rect x="296" y="126" width="8" height="12" rx="1"/><rect x="278" y="152" width="8" height="12" rx="1"/><rect x="296" y="152" width="8" height="12" rx="1"/><rect x="278" y="178" width="8" height="12" rx="1"/><rect x="296" y="178" width="8" height="12" rx="1"/><rect x="278" y="204" width="8" height="12" rx="1"/><rect x="296" y="204" width="8" height="12" rx="1"/><rect x="278" y="230" width="8" height="12" rx="1"/><rect x="296" y="230" width="8" height="12" rx="1"/><rect x="278" y="256" width="8" height="12" rx="1"/><rect x="296" y="256" width="8" height="12" rx="1"/></g></g>
+          <g class="edificio"><rect x="324" y="182" width="36" height="100" rx="3" fill="#484848"/><g fill="rgba(255,255,255,0.45)"><rect x="334" y="198" width="8" height="12" rx="1"/><rect x="334" y="224" width="8" height="12" rx="1"/><rect x="334" y="250" width="8" height="12" rx="1"/></g></g>
+          <path d="M0 283 H 360" stroke="#484848" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+
+        <div class="cifras">
+          <div class="cifra">
+            <strong><small>USD </small><span class="contador" data-valor="12241">12.241</span><small> M</small></strong>
+            <span>de ingresos en 2025 (+10 % frente a 2024)</span>
+            <em>Airbnb, 10-K año fiscal 2025</em>
+          </div>
+          <div class="cifra">
+            <strong><span class="contador" data-valor="533" data-decimales="1">533,0</span><small> M</small></strong>
+            <span>de noches y plazas reservadas en 2025</span>
+            <em>Airbnb, carta a accionistas Q4 2025</em>
+          </div>
+          <div class="cifra">
+            <strong><span class="contador" data-valor="220">220</span>+</strong>
+            <span>países y regiones con anuncios</span>
+            <em>Airbnb Newsroom, mayo de 2026</em>
+          </div>
         </div>
-        <aside class="notes"><p><strong>Expone: Camilo Artunduaga Bueno</strong> · Tiempo: 1:50</p></aside>
+
+        <div class="crisis">
+          <small>La dificultad</small>
+          <h3>Una crisis de confianza (2011)</h3>
+          <p>Un huésped destrozó la casa de una anfitriona en San Francisco y Airbnb reaccionó tarde. Su CEO lo admitió: «no estábamos preparados para la crisis».</p>
+        </div>
+        <ol class="respuesta">
+          <li><small>1 de agosto de 2011</small><strong>Disculpa pública del CEO</strong></li>
+          <li><small>15 de agosto de 2011</small><strong>Garantía al anfitrión de USD 50.000</strong></li>
+          <li><small>Mayo de 2012</small><strong>Garantía de USD 1 millón</strong></li>
+        </ol>
+
+        <svg class="historia" viewBox="0 0 1920 150" role="img" aria-label="Línea de tiempo de 2007 a 2026">
+          <path class="eje" d="M260 80 H 1760"/>
+          <path class="marcas" d="M260 74 V 86 M339 74 V 86 M418 74 V 86 M497 74 V 86 M576 74 V 86 M655 74 V 86 M734 74 V 86 M813 74 V 86 M892 74 V 86 M971 74 V 86 M1049 74 V 86 M1128 74 V 86 M1207 74 V 86 M1286 74 V 86 M1365 74 V 86 M1444 74 V 86 M1523 74 V 86 M1602 74 V 86 M1681 74 V 86 M1760 74 V 86" stroke="#C9C9C9" stroke-width="3"/>
+          <path class="startup" d="M260 80 H 418"/>
+          <text class="rotulo-startup" x="260" y="124">Etapa startup (2007–2009)</text>
+          <g class="hito"><circle cx="497" cy="80" r="10"/><text x="497" y="48" text-anchor="middle"><tspan class="anio">2010</tspan> Serie A: USD 7,2 millones</text></g>
+          <g class="hito"><circle cx="576" cy="80" r="10"/><text x="564" y="124"><tspan class="anio">2011</tspan> Serie B: USD 112 millones</text></g>
+          <g class="hito"><circle cx="1286" cy="80" r="10"/><text x="1286" y="48" text-anchor="middle"><tspan class="anio">2020</tspan> Salida a bolsa (Nasdaq: ABNB)</text></g>
+          <g class="hito"><circle class="hito-final" cx="1760" cy="80" r="12"/><text x="1760" y="124" text-anchor="end"><tspan class="anio">2026</tspan> hoy</text></g>
+        </svg>
+
+        <p class="pie-fuente">Fuentes: Airbnb, 10-K y carta Q4 2025 (12-feb-2026); Airbnb Newsroom (2026); TechCrunch (2011); VentureBeat (2010); Airbnb, comunicado de salida a bolsa (2020)</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Camilo Artunduaga Bueno</strong> · Tiempo: 1:50</p>
+          <ul>
+            <li>Cerrar el gancho de la portada: «De 3 colchones inflables… a más de 9 millones de anuncios activos» (Airbnb Newsroom, mayo de 2026).</li>
+            <li>Por instrucción de la profesora, la etapa de empresa grande va en una sola diapositiva: lo importante es que el crecimiento vino después de resolver la confianza.</li>
+            <li>Cifras: ingresos de USD 12.241 millones en 2025, 10 % más que en 2024 (10-K); 533,0 millones de noches y plazas reservadas en 2025 (desde 2025 Airbnb suma alojamiento, experiencias y servicios en esa métrica); anuncios en más de 220 países y regiones.</li>
+            <li>Para dimensionar: en noviembre de 2010 llevaban 700.000 noches reservadas en total (VentureBeat); en 2025 fueron 533 millones en un solo año.</li>
+            <li>La dificultad, a mediados de 2011: un huésped destrozó la casa de una anfitriona («EJ») en San Francisco. Airbnb tardó en responder; Brian Chesky escribió «dejamos caer la pelota» y «no estábamos preparados para la crisis» (TechCrunch, 1 de agosto de 2011).</li>
+            <li>Cómo la abordaron: disculpa pública y una garantía de USD 50.000 para los anfitriones desde el 15 de agosto de 2011, retroactiva; en mayo de 2012 subió a USD 1 millón. Otra vez, la solución fue de confianza.</li>
+            <li>Financiación: Serie A de USD 7,2 millones (noviembre de 2010, Sequoia y Greylock) y Serie B de USD 112 millones (julio de 2011, liderada por Andreessen Horowitz, con una valoración de más de USD 1.000 millones según TechCrunch). Salida a bolsa el 10 de diciembre de 2020 en Nasdaq (ABNB), a USD 68 por acción.</li>
+            <li>Si sobra tiempo, segunda dificultad: COVID-19. En mayo de 2020 despidieron a cerca de 1.900 personas (≈ 25 %) y esperaban ingresos de menos de la mitad de 2019 (carta de Chesky); en diciembre del mismo año salieron a bolsa.</li>
+          </ul>
+          <p>Fuentes: Airbnb, 10-K año fiscal 2025 y carta a accionistas Q4 2025 (12 de febrero de 2026); Airbnb Newsroom, «About us» (mayo de 2026); Arrington, TechCrunch (2011); Ha, VentureBeat (2010); Tsotsis, TechCrunch (2011); Airbnb, comunicado de la salida a bolsa (2020); Chesky, carta del 5 de mayo de 2020.</p>
+        </aside>
       </section>
 
       <!-- 9 · Reflexión del grupo · los tres ----------------------------- -->
-      <section class="estilo-transicion">
-        <div class="pendiente">
-          <h2>Reflexión del grupo</h2>
-          <p>Diapositiva 9 · Se construye en la Fase 3.</p>
+      <section class="estilo-transicion reflexion" data-animacion="reflexion">
+        <p class="reflexion__borrador">BORRADOR: el grupo lo reescribirá</p>
+        <p class="reflexion__etiqueta">Pregunta orientadora</p>
+        <p class="reflexion__pregunta">¿Qué explica que esta empresa haya convertido una solución tecnológica en un negocio de alto valor comercial y qué puede aprender el grupo de ese proceso?</p>
+        <h2 class="reflexion__respuesta">Convirtió la confianza entre desconocidos en un producto tecnológico y cobró una comisión por cada estadía. Escaló después de hacer cosas que no escalan.</h2>
+
+        <svg class="ruta" viewBox="0 0 1920 130" role="img" aria-label="Ruta de San Francisco, 2007, a Florencia, Caquetá">
+          <path class="ruta__camino" id="ruta-camino" d="M262 58 C 700 -14, 1300 -10, 1694 50"/>
+          <g class="ruta__pin" transform="translate(262 70)">
+            <path d="M0 0 C -6 -10, -16 -18, -16 -30 A 16 16 0 1 1 16 -30 C 16 -18, 6 -10, 0 0 Z" fill="#484848"/>
+            <circle cx="0" cy="-30" r="6" fill="#FFFFFF"/>
+          </g>
+          <text x="236" y="104">San Francisco</text>
+          <text class="ruta__lugar-sub" x="236" y="128">2007</text>
+          <g class="ruta__pin ruta__pin--destino" transform="translate(1694 62)">
+            <path d="M0 0 C -6 -10, -16 -18, -16 -30 A 16 16 0 1 1 16 -30 C 16 -18, 6 -10, 0 0 Z" fill="#FF5A5F"/>
+            <circle cx="0" cy="-30" r="6" fill="#FFFFFF"/>
+          </g>
+          <text x="1722" y="96" text-anchor="end">Florencia, Caquetá</text>
+          <text class="ruta__lugar-sub" x="1722" y="120" text-anchor="end">nosotros, 2026</text>
+          <g class="avion ruta__avion" transform="translate(1570 34) rotate(6)">
+            <path d="M34 0 L-30 -18 L-16 0 L-30 18 Z"/>
+            <path d="M-16 0 L34 0"/>
+          </g>
+        </svg>
+
+        <div class="aportes">
+          <div class="aporte">
+            <span class="cinta" aria-hidden="true"></span>
+            <small>Karly</small>
+            <h3>Lo que aprendimos</h3>
+            <ul>
+              <li>Empezar por un problema propio, con un MVP mínimo.</li>
+              <li>La tecnología vale cuando resuelve la desconfianza.</li>
+              <li>Los rechazos midieron un prejuicio, no la idea.</li>
+            </ul>
+          </div>
+          <div class="aporte">
+            <span class="cinta" aria-hidden="true"></span>
+            <small>Sebastian</small>
+            <h3>Lo que aplicaríamos en Caquetá</h3>
+            <ul>
+              <li>Habitaciones verificadas para estudiantes que llegan a Florencia, o fincas y guías de turismo de naturaleza.</li>
+              <li>Empezar sin escalar: visitar, fotografiar y verificar cada lugar.</li>
+              <li>Buscar capital semilla: iNNpulsa y Fondo Emprender.</li>
+            </ul>
+          </div>
+          <div class="aporte">
+            <span class="cinta" aria-hidden="true"></span>
+            <small>Camilo</small>
+            <h3>Lo difícil de replicar</h3>
+            <ul>
+              <li>Su red de inversión (Y Combinator, Sequoia) y la escala de su demanda.</li>
+              <li>En Colombia, las plataformas turísticas deben mostrar el RNT de cada prestador.</li>
+              <li>Creció más rápido que su seguridad: la crisis de 2011.</li>
+            </ul>
+          </div>
         </div>
-        <aside class="notes"><p><strong>Exponen: Karly, Sebastian y Camilo</strong> (≈ 0:40 cada uno) · Tiempo: 2:00</p></aside>
+
+        <p class="pie-fuente">Reflexión propia del grupo (borrador). Apoyos: Ley 2069 de 2020 (material de clase); MinCIT (17-ene-2022) sobre el RNT de las plataformas</p>
+
+        <aside class="notes">
+          <p><strong>Exponen: Karly, Sebastian y Camilo</strong> (≈ 0:40 cada uno) · Tiempo: 2:00</p>
+          <p><strong>[BORRADOR]: el grupo debe reescribir esta reflexión con sus propias palabras antes de presentar.</strong></p>
+          <ul>
+            <li>Respuesta a la pregunta orientadora (los tres, o quien abra): el valor de Airbnb no es «una página web», sino tres cosas juntas: tecnología que reduce el riesgo de confiar (perfiles, reseñas, pagos), un modelo de comisión que crece con cada estadía y unos fundadores que siguieron aprendiendo de los usuarios cuando nadie les creía.</li>
+            <li>Karly, lo que aprendimos: el MVP fue mínimo (un sitio básico y tres colchones) y sirvió para descubrir el problema real. Los 0 inversionistas de 2008 no midieron la idea: midieron un prejuicio («desconocido = peligro»).</li>
+            <li>Sebastian, lo que aplicaríamos: una plataforma que conecte a estudiantes que llegan a Florencia de otros municipios con habitaciones verificadas cerca de la Universidad de la Amazonia, o fincas y guías locales con visitantes de turismo de naturaleza. Empezaríamos sin escalar: visitar cada lugar, tomar buenas fotos, verificar a los propietarios y pedir reseñas de los dos lados; cobrar una comisión pequeña solo cuando haya un acuerdo. Apoyos: capital semilla de iNNpulsa, Fondo Emprender (SENA), ángeles inversionistas y consultorios empresariales universitarios que promueve la Ley 2069 de 2020.</li>
+            <li>Camilo, lo difícil de replicar y la mirada crítica: Y Combinator y Sequoia no solo dieron dinero, dieron red y credibilidad, y ese ecosistema no existe igual en la región. San Francisco y Nueva York tienen una demanda turística enorme; en Caquetá habría que validar primero si hay suficientes viajeros y pagos digitales. En Colombia, las plataformas de servicios turísticos deben inscribirse en el Registro Nacional de Turismo y exhibir el RNT de cada prestador (Ley 2068 de 2020, Decreto 1836 de 2021). Y sin limitarse a elogiar: la crisis de 2011 muestra que crecieron más rápido que sus sistemas de seguridad.</li>
+            <li>[VERIFICAR] antes de mencionar en voz alta las tensiones de Airbnb con ciudades y vecinos (regulación del alquiler de corto plazo): falta una fuente concreta (por ejemplo, los factores de riesgo del Form S-1).</li>
+          </ul>
+          <p>Fuentes de apoyo: material de clase «Emprendimiento en Colombia — Ley 2069 de 2020»; MinCIT, comunicado del 17 de enero de 2022 sobre parafiscales y RNT de plataformas digitales; TechCrunch (2011).</p>
+        </aside>
       </section>
 
       <!-- 10 · Referencias · Camilo -------------------------------------- -->
-      <section class="estilo-corporativo">
-        <div class="pendiente">
-          <h2>Referencias</h2>
-          <p>Diapositiva 10 · Se construye en la Fase 3.</p>
+      <section class="estilo-corporativo refs">
+        <h2 class="refs__titulo">Referencias</h2>
+
+        <div class="refs__columnas">
+          <div class="refs__columna">
+            <h3>Fuentes oficiales: Airbnb y entidades públicas</h3>
+            <ol>
+              <li><b>Airbnb, Inc. (2020).</b> <i>Form S-1</i> [prospecto de salida a bolsa]. SEC. <a href="https://www.sec.gov/Archives/edgar/data/1559720/000119312520294801/d81668ds1.htm" target="_blank" rel="noopener">sec.gov</a></li>
+              <li><b>Airbnb, Inc. (2026).</b> <i>Form 10-K, año fiscal 2025</i>. SEC. <a href="https://www.sec.gov/Archives/edgar/data/1559720/000155972026000004/abnb-20251231.htm" target="_blank" rel="noopener">sec.gov</a></li>
+              <li><b>Airbnb, Inc. (2026).</b> <i>Carta a accionistas del cuarto trimestre de 2025</i>. SEC. <a href="https://www.sec.gov/Archives/edgar/data/1559720/000119312526048670/d58192dex991.htm" target="_blank" rel="noopener">sec.gov</a></li>
+              <li><b>Airbnb Newsroom (2026).</b> <i>About us</i>. <a href="https://news.airbnb.com/about-us/" target="_blank" rel="noopener">news.airbnb.com</a></li>
+              <li><b>Airbnb (s. f.).</b> <i>Tarifas de servicio de Airbnb</i> [centro de ayuda]. <a href="https://www.airbnb.com/help/article/1857" target="_blank" rel="noopener">airbnb.com/help</a></li>
+              <li><b>Airbnb, Inc. (2020).</b> <i>Airbnb Announces Pricing of Initial Public Offering</i>. <a href="https://investors.airbnb.com/press-releases/news-details/2020/Airbnb-Announces-Pricing-of-Initial-Public-Offering/default.aspx" target="_blank" rel="noopener">investors.airbnb.com</a></li>
+              <li><b>Chesky, B. (2020).</b> <i>A Message from Co-Founder and CEO Brian Chesky</i>. <a href="https://news.airbnb.com/a-message-from-co-founder-and-ceo-brian-chesky/" target="_blank" rel="noopener">news.airbnb.com</a></li>
+              <li><b>MinCIT (2022).</b> <i>Reglas para pago de parafiscales y RNT de plataformas digitales</i>. <a href="https://www.mincit.gov.co/prensa/noticias/turismo/reglas-pago-parafiscales-y-rnt-plataforma-digital" target="_blank" rel="noopener">mincit.gov.co</a></li>
+            </ol>
+          </div>
+          <div class="refs__columna">
+            <h3>Fuentes independientes y entrevistas</h3>
+            <ol>
+              <li><b>Graham, P. (2013).</b> <i>Do Things that Don't Scale</i>. <a href="https://paulgraham.com/ds.html" target="_blank" rel="noopener">paulgraham.com</a></li>
+              <li><b>Graham, P. (2020).</b> <i>The Airbnbs</i>. <a href="https://paulgraham.com/airbnbs.html" target="_blank" rel="noopener">paulgraham.com</a></li>
+              <li><b>First Round Review (2015).</b> <i>How design thinking transformed Airbnb from failing startup to billion dollar business</i>. <a href="https://review.firstround.com/how-design-thinking-transformed-airbnb-from-failing-startup-to-billion-dollar-business/" target="_blank" rel="noopener">review.firstround.com</a></li>
+              <li><b>NPR, TED Radio Hour (2016).</b> <i>Joe Gebbia: How Do You "Design" Trust Between Strangers?</i> <a href="https://www.npr.org/transcripts/478563991" target="_blank" rel="noopener">npr.org</a></li>
+              <li><b>Wilson, F. (2011).</b> <i>Airbnb</i>. AVC. <a href="https://avc.com/2011/03/airbnb/" target="_blank" rel="noopener">avc.com</a></li>
+              <li><b>Sawers, P. (2015).</b> <i>Airbnb once tried to give away 10% of the company for $150K, and nobody bit</i>. VentureBeat. <a href="https://venturebeat.com/2015/07/13/airbnb-once-tried-to-give-away-10-of-the-company-for-150k-and-nobody-bit" target="_blank" rel="noopener">venturebeat.com</a></li>
+              <li><b>Kunthara, S. (2020).</b> <i>Airbnb's IPO Is A Big Deal For The Company. It's Big For Y Combinator, Too</i>. Crunchbase News. <a href="https://news.crunchbase.com/venture/airbnb-ipo-origin-story-y-combinator/" target="_blank" rel="noopener">news.crunchbase.com</a></li>
+              <li><b>Arrington, M. (2011).</b> <i>Airbnb Offers Unconditional Apology, And $50,000 Insurance Guarantee</i>. TechCrunch. <a href="https://techcrunch.com/2011/08/01/airbnb-offers-unconditional-apology-and-50000-insurance-guarantee/" target="_blank" rel="noopener">techcrunch.com</a></li>
+            </ol>
+          </div>
         </div>
-        <aside class="notes"><p><strong>Expone: Camilo Artunduaga Bueno</strong> · Tiempo: 0:20</p></aside>
+
+        <p class="refs__cierre"><img src="assets/logo/airbnb-icono.svg" alt="">Gracias. ¿Preguntas?</p>
+        <p class="pie-fuente">Todas las fuentes en línea se consultaron el 18 de octubre de 2026. Lista completa en las notas.</p>
+
+        <aside class="notes">
+          <p><strong>Expone: Camilo Artunduaga Bueno</strong> · Tiempo: 0:20</p>
+          <ul>
+            <li>«Usamos documentos oficiales de Airbnb ante la SEC (el S-1 de 2020 y el 10-K de 2025), su sala de prensa y fuentes independientes como Paul Graham, TechCrunch y VentureBeat. Las cifras de la empresa grande vienen de los informes financieros, no de publicidad.»</li>
+            <li>Abrir preguntas.</li>
+          </ul>
+          <p>Otras fuentes consultadas (no caben en la diapositiva):</p>
+          <ul>
+            <li>Ha, A. (10 de noviembre de 2010). Airbnb lies down with VCs, wakes up with money. VentureBeat. https://venturebeat.com/business/airbnb-funding</li>
+            <li>Tsotsis, A. (24 de julio de 2011). Airbnb Bags $112 Million In Series B From Andreessen, DST And General Catalyst. TechCrunch. https://techcrunch.com/2011/07/24/airbnb-bags-112-million-in-series-b-from-andreessen-and-others/</li>
+            <li>Grainger, C. (24 de agosto de 2026). An $80 idea changed travel forever. Newsweek. https://www.newsweek.com/an-80-idea-changed-travel-forever-12283773</li>
+            <li>Chesky, B. (12 de julio de 2015). 7 Rejections. Medium. https://medium.com/@bchesky/7-rejections-7d894cbaa084</li>
+            <li>Y Combinator (s. f.). Airbnb. https://www.ycombinator.com/companies/airbnb</li>
+            <li>Sequoia Capital (s. f.). Airbnb. https://sequoiacap.com/companies/airbnb/</li>
+            <li>Material de clase: «Emprendimiento en Colombia — Ley 2069 de 2020», Taller de Emprendimiento e Innovación, Universidad de la Amazonia.</li>
+          </ul>
+        </aside>
       </section>
 
     </div>
@@ -241,6 +814,14 @@
   <script src="vendor/reveal/plugin/notes.js"></script>
   <script src="js/animaciones.js"></script>
   <script src="js/diapositivas/01-portada.js"></script>
+  <script src="js/diapositivas/02-origen.js"></script>
+  <script src="js/diapositivas/03-problema.js"></script>
+  <script src="js/diapositivas/04-mvp.js"></script>
+  <script src="js/diapositivas/05-valle.js"></script>
+  <script src="js/diapositivas/06-potencio.js"></script>
+  <script src="js/diapositivas/07-modelo.js"></script>
+  <script src="js/diapositivas/08-crecimiento.js"></script>
+  <script src="js/diapositivas/09-reflexion.js"></script>
   <script src="js/presentacion.js"></script>
 </body>
 </html>
