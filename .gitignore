@@ -1,0 +1,4 @@
+node_modules/
+vendor/
+salida/
+.claude/settings.local.json
