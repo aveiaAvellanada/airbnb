@@ -1,0 +1,190 @@
+/* ==========================================================================
+   Base de la presentación: tokens, lienzo 16:9 y los tres estilos visuales
+   que acompañan la historia (cuaderno → transición → corporativo).
+   ========================================================================== */
+
+:root {
+  /* Paleta de Airbnb */
+  --rausch: #FF5A5F;
+  --babu: #00A699;
+  --arches: #FC642D;
+  --hof: #484848;
+  --foggy: #767676;
+
+  /* Materiales */
+  --papel: #FCFBF8;
+  --cuadricula: rgba(72, 110, 150, 0.13);
+  --margen-cuaderno: rgba(255, 90, 95, 0.55);
+  --blanco: #FFFFFF;
+  --exterior: #E8E6E2; /* franjas fuera del 16:9 si el proyector no es panorámico */
+
+  /* Tipografía (lienzo de 1920 × 1080) */
+  --fuente: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --t-pie: 22px;       /* fuentes al pie */
+  --t-meta: 26px;      /* datos secundarios */
+  --t-cuerpo: 36px;    /* texto corriente */
+  --t-subtitulo: 44px;
+  --t-titulo: 76px;
+  --t-gancho: 116px;
+  --t-cifra: 150px;    /* cifras grandes */
+
+  /* Retícula */
+  --margen-izq: 220px; /* a la derecha del margen rojo del cuaderno */
+  --margen-der: 120px;
+}
+
+/* --- Lienzo ---------------------------------------------------------------- */
+
+html,
+body,
+.reveal-viewport {
+  background: var(--exterior);
+}
+
+.reveal {
+  font-family: var(--fuente);
+  font-size: var(--t-cuerpo);
+  color: var(--hof);
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  font-variant-numeric: lining-nums;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+/* Descendiente (no hijo directo): al imprimir, reveal.js mete cada diapositiva
+   dentro de un .pdf-page y la diapositiva debe seguir ocupando la página entera. */
+.reveal .slides section {
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal p,
+.reveal ul,
+.reveal figure {
+  margin: 0;
+}
+
+.reveal ::selection {
+  background: rgba(255, 90, 95, 0.25);
+}
+
+/* Barra de progreso fina en Rausch */
+.reveal .progress {
+  height: 6px;
+  color: var(--rausch);
+  background: rgba(72, 72, 72, 0.08);
+}
+
+/* Los estilos se limitan a <section>: reveal.js copia las clases de cada
+   diapositiva a su capa de fondo (un <div>) y no queremos pintarlos dos veces. */
+
+/* --- Estilo 1: cuaderno cuadriculado (diapositivas 1–5) -------------------- */
+
+section.estilo-cuaderno {
+  background-color: var(--papel);
+  background-image:
+    linear-gradient(90deg, transparent 148px, var(--margen-cuaderno) 148px 151px, transparent 151px),
+    linear-gradient(var(--cuadricula) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, var(--cuadricula) 1.5px, transparent 1.5px);
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+  background-position: 0 0, 0 20px, 20px 0;
+}
+
+/* Grano del papel: ruido SVG, sin imágenes externas */
+section.estilo-cuaderno::before,
+section.estilo-transicion::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .27 0 0 0 0 .22 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
+/* --- Estilo 2: transición (diapositivas 6–7): papel liso, sin cuadrícula ---- */
+
+section.estilo-transicion {
+  background-color: var(--papel);
+}
+
+/* --- Estilo 3: corporativo (diapositivas 8 y 10): blanco y limpio ---------- */
+
+section.estilo-corporativo {
+  background-color: var(--blanco);
+}
+
+/* --- Piezas compartidas --------------------------------------------------- */
+
+/* Cinta adhesiva tipo washi para pegar polaroids y notas */
+.cinta {
+  position: absolute;
+  width: 210px;
+  height: 56px;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.18) 0 10px, transparent 10px 20px),
+    rgba(0, 166, 153, 0.45);
+  clip-path: polygon(0 8%, 4% 0, 8% 10%, 12% 0, 88% 0, 92% 9%, 96% 0, 100% 10%, 100% 90%, 96% 100%, 92% 91%, 88% 100%, 12% 100%, 8% 90%, 4% 100%, 0 92%);
+  mix-blend-mode: multiply;
+}
+
+/* Foto instantánea con marco blanco */
+.polaroid {
+  position: absolute;
+  background: var(--blanco);
+  padding: 24px 24px 0;
+  box-shadow:
+    0 1px 2px rgba(60, 40, 20, 0.14),
+    0 24px 48px -20px rgba(60, 40, 20, 0.38);
+}
+
+.polaroid svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.polaroid figcaption {
+  padding: 20px 4px 28px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--hof);
+}
+
+/* Línea de fuente al pie de cada diapositiva con datos */
+.pie-fuente {
+  position: absolute;
+  right: var(--margen-der);
+  bottom: 36px;
+  font-size: var(--t-pie);
+  color: var(--foggy);
+}
+
+/* Diapositivas que aún no se construyen (Fase 3) */
+.pendiente {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 160px;
+  right: var(--margen-der);
+}
+
+.pendiente h2 {
+  font-size: var(--t-titulo);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.pendiente p {
+  margin-top: 28px;
+  font-size: var(--t-meta);
+  color: var(--foggy);
+}

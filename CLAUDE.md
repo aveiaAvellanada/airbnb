@@ -89,8 +89,35 @@ El detalle por diapositiva está en `contenido.md`; las fuentes y el registro de
 ## Carpetas
 
 ```
-docs/          PDF del curso (guía, ejemplo Mercado Libre, clase Ley 2069 de 2020)
-assets/logo/   SVG oficiales de Airbnb (logo completo e ícono)
-contenido.md   Guion por diapositiva
-fuentes.md     Fuentes y registro de cifras
+index.html                 Las 10 diapositivas (<section>) con sus notas (<aside class="notes">)
+css/base.css               Tokens, lienzo 1920×1080 y estilos cuaderno / transición / corporativo
+css/diapositivas/NN-*.css  Estilos de cada diapositiva
+js/animaciones.js          Registro de animaciones GSAP por diapositiva
+js/diapositivas/NN-*.js    Animación de cada diapositiva
+js/presentacion.js         Configuración de reveal.js y conexión con las animaciones
+scripts/copiar-vendor.mjs  Copia librerías de node_modules a vendor/ (postinstall)
+scripts/servidor.mjs       Servidor local sin dependencias (npm start)
+vendor/                    reveal.js, GSAP y fuente; se versiona para funcionar sin internet
+docs/                      PDF del curso (guía, ejemplo Mercado Libre, clase Ley 2069 de 2020)
+assets/logo/               SVG oficiales de Airbnb (logo completo e ícono)
+contenido.md               Guion por diapositiva
+fuentes.md                 Fuentes y registro de cifras
 ```
+
+## Convenciones técnicas (aprendidas en la Fase 2)
+
+- **El HTML/CSS es el estado final.** Las animaciones solo usan `gsap.from`/`fromTo` dentro de
+  `Animaciones.registrar('nombre', …)` y la diapositiva lleva `data-animacion="nombre"`. No se
+  animan en impresión (`Reveal.isPrintView()`), en la vista del presentador ni con
+  `prefers-reduced-motion`. Tecla A = repetir animación.
+- **reveal.js 6:** la API es `Reveal.isPrintView()` (no existe `isPrintingPDF`). Las librerías se
+  cargan como `<script>` clásicos (UMD) para que `index.html` abra también con doble clic (`file://`).
+- **Fuente:** se incrusta en base64 en `vendor/fuentes/plus-jakarta-sans.css` (los navegadores
+  bloquean fuentes desde `file://`). Familia CSS: `'Plus Jakarta Sans'`.
+- **Selectores:** usar `section.estilo-*` (reveal.js copia las clases de la diapositiva a su capa
+  de fondo) y `.reveal .slides section` (al imprimir, cada diapositiva queda dentro de `.pdf-page`).
+- **SVG:** no usar `<use>` para piezas con estilos de clase (el CSS no llega a su árbol interno);
+  repetir el marcado. Para trazos que se dibujan con DrawSVG y remate redondeado, ocultarlos
+  (`autoAlpha`) hasta que empiecen, o se ve un punto.
+- **Verificación:** capturas con Playwright usando el Edge instalado (`channel: 'msedge'`), en
+  1920×1080, 1366×768, 1024×768 y `?print-pdf`.

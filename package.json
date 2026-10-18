@@ -1,0 +1,20 @@
+{
+  "name": "airbnb-caso-de-exito-kaseca",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Presentación web animada: Airbnb como caso de éxito de un emprendimiento de base tecnológica (equipo KASECA, Universidad de la Amazonia).",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/servidor.mjs",
+    "vendor": "node scripts/copiar-vendor.mjs",
+    "postinstall": "node scripts/copiar-vendor.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "5.3.0",
+    "gsap": "3.15.0",
+    "reveal.js": "6.0.2"
+  },
+  "devDependencies": {
+    "playwright-core": "1.64.1"
+  }
+}

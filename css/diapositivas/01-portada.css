@@ -1,0 +1,123 @@
+/* Diapositiva 1 — Portada (estilo cuaderno) */
+
+.portada__logo {
+  position: absolute;
+  left: calc(var(--margen-izq) - 8px);
+  top: 70px;
+  width: 260px;
+  height: 130px;
+}
+
+.portada__gancho {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 250px;
+  font-size: var(--t-gancho);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: var(--hof);
+}
+
+.portada__linea {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Punto de partida de la flecha: justo después de "a…" */
+.portada__ancla {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+}
+
+.portada__flecha {
+  position: absolute;
+  left: 14px;
+  top: -62px;
+  width: 900px;
+  height: 520px;
+  overflow: visible;
+}
+
+.portada__flecha path {
+  fill: none;
+  stroke: var(--rausch);
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.portada__subtitulo {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 548px;
+  max-width: 820px;
+  font-size: var(--t-subtitulo);
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.portada__equipo {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 712px;
+}
+
+.portada__equipo h2 {
+  font-size: var(--t-meta);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--rausch);
+}
+
+.portada__equipo ul {
+  margin-top: 10px;
+  padding: 0;
+  list-style: none;
+  font-size: var(--t-cuerpo);
+  font-weight: 600;
+  line-height: 1.38;
+}
+
+.portada__curso {
+  position: absolute;
+  left: var(--margen-izq);
+  bottom: 52px;
+  font-size: var(--t-pie);
+  line-height: 1.45;
+  color: var(--foggy);
+}
+
+.portada__polaroid {
+  left: 1236px;
+  top: 112px;
+  width: 560px;
+  transform: rotate(3deg);
+}
+
+.portada__polaroid .cinta {
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+/* Ilustración: las líneas de tinta van en Hof, como dibujadas con marcador */
+.portada__escena .tinta {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Las bocanadas de aire solo existen durante la animación */
+.portada__escena .soplo {
+  fill: none;
+  stroke: var(--hof);
+  stroke-width: 3;
+  stroke-linecap: round;
+  opacity: 0;
+}
