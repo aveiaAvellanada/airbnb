@@ -86,7 +86,7 @@
   top: 540px;
   box-sizing: border-box;
   width: 500px;
-  min-height: 380px;
+  min-height: 340px;
   padding: 30px 32px 28px;
   background: var(--tinte);
   box-shadow: 0 12px 26px -16px rgba(60, 40, 20, 0.45);
@@ -120,14 +120,15 @@
 }
 
 .aporte ul {
-  margin: 14px 0 0;
-  padding: 0 0 0 26px;
-  font-size: 24px;
+  margin: 18px 0 0;
+  padding: 0 0 0 28px;
+  font-size: 32px;
+  font-weight: 600;
   line-height: 1.32;
 }
 
 .aporte li + li {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .aporte li::marker {

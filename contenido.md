@@ -346,7 +346,7 @@ mismo `data-id`, y reveal.js la anima entre diapositivas consecutivas:
 
 ---
 
-## Diapositiva 9 — Reflexión del grupo `[BORRADOR]`
+## Diapositiva 9 — Reflexión del grupo (versión final en `index.html`: Sebastian, Karly y Camilo)
 
 - **Expositores:** los tres (≈ 0:40 cada uno) · **Tiempo:** 2:00
 - **Estilo:** limpio, con un guiño al cuaderno del inicio (propuesta: "nuestro cuaderno" de startup).
