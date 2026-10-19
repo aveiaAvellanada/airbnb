@@ -73,13 +73,48 @@
   pointer-events: none;
 }
 
-.potencio__texto {
+/* Claves del éxito: decisiones, capacidades y condiciones (punto f de la guía) */
+.claves {
   position: absolute;
   left: var(--margen-izq);
-  top: 720px;
-  width: 760px;
-  font-size: 30px;
-  line-height: 1.32;
+  top: 722px;
+  width: 820px;
+}
+
+.claves h3 {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--rausch);
+}
+
+.claves h3 span {
+  font-weight: 500;
+  color: var(--foggy);
+}
+
+.claves dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin: 10px 0 0;
+}
+
+.claves dl > div {
+  padding-left: 16px;
+  border-left: 4px solid var(--babu);
+}
+
+.claves dt {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--foggy);
+}
+
+.claves dd {
+  margin: 2px 0 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.22;
 }
 
 /* Barras de ingresos */

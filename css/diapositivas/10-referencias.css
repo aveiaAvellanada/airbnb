@@ -37,7 +37,7 @@
 }
 
 .refs__columna li {
-  font-size: 23px;
+  font-size: 21px;
   line-height: 1.3;
 }
 
@@ -64,7 +64,7 @@
 .refs__cierre {
   position: absolute;
   left: var(--margen-izq);
-  top: 918px;
+  top: 900px;
   display: flex;
   align-items: center;
   gap: 22px;
@@ -76,4 +76,50 @@
 .refs__cierre img {
   width: 64px;
   height: 64px;
+}
+
+/* Fuentes académicas: fila completa bajo las dos columnas */
+.refs__academicas {
+  position: absolute;
+  left: var(--margen-izq);
+  top: 712px;
+  width: 1560px;
+}
+
+.refs__academicas h3 {
+  padding-bottom: 10px;
+  border-bottom: 4px solid var(--arches);
+  font-size: var(--t-pie);
+  font-weight: 800;
+  color: var(--foggy);
+}
+
+.refs__academicas ol {
+  display: grid;
+  grid-template-columns: 740px 740px;
+  column-gap: 80px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.refs__academicas li {
+  font-size: 21px;
+  line-height: 1.3;
+}
+
+.refs__academicas b {
+  font-weight: 800;
+}
+
+.refs__academicas i {
+  font-style: italic;
+}
+
+.refs__academicas a {
+  font-weight: 700;
+  color: var(--rausch);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }

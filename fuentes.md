@@ -3,8 +3,9 @@
 Fecha de consulta de todas las fuentes en línea: **18 de octubre de 2026**.
 
 **Requisito de la guía:** mínimo 4 fuentes, al menos una oficial y una independiente.
-**Cumplimiento:** 8 fuentes oficiales (F1–F7 y F20), 8 independientes (F8–F9, F13–F16, F19, F22)
-y 4 entrevistas o testimonios documentados (F10–F12, F13b).
+**Cumplimiento:** 8 fuentes oficiales (F1–F7 y F20), 8 independientes (F8–F9, F13–F16, F19, F22),
+4 entrevistas o testimonios documentados (F10–F12, F13b) y 2 fuentes académicas revisadas por pares
+(F23–F24, ruta «Google Académico» de la guía).
 
 Convenciones:
 - `USD` = dólares estadounidenses, valores nominales del año indicado.
@@ -41,6 +42,13 @@ Convenciones:
 | F16 | Ha, A. (10 de noviembre de 2010). *Airbnb lies down with VCs, wakes up with money*. VentureBeat. https://venturebeat.com/business/airbnb-funding | Serie A de USD 7,2 millones (Sequoia y Greylock); financiación total USD 7,8 millones; capital semilla previo de Sequoia y Youniversity Ventures; tracción a nov-2010. |
 | F19 | Grainger, C. (24 de agosto de 2026). *An $80 idea changed travel forever*. Newsweek. https://www.newsweek.com/an-80-idea-changed-travel-forever-12283773 | Precio de los primeros colchones: USD 80 por noche (2007). |
 | F22 | Tsotsis, A. (24 de julio de 2011). *Airbnb Bags $112 Million In Series B From Andreessen, DST And General Catalyst*. TechCrunch. https://techcrunch.com/2011/07/24/airbnb-bags-112-million-in-series-b-from-andreessen-and-others/ | Serie B (USD 112 millones, valoración de más de USD 1.000 millones); tracción a jul-2011. |
+
+### Académicas (artículos revisados por pares; datos verificados en Crossref)
+
+| ID | Referencia | Para qué se usa |
+|----|-----------|-----------------|
+| F23 | Guttentag, D. (2015). Airbnb: disruptive innovation and the rise of an informal tourism accommodation sector. *Current Issues in Tourism, 18*(12), 1192–1217 (en línea desde el 2-sep-2013). https://doi.org/10.1080/13683500.2013.827159 | Diap. 4, «Qué la diferencia»: el atractivo de Airbnb frente al alojamiento tradicional se centra en el ahorro, las comodidades de un hogar y la posibilidad de experiencias más locales (resumen del artículo). Lo enmarca como innovación disruptiva. |
+| F24 | Ert, E., Fleischer, A. y Magen, N. (2016). Trust and reputation in the sharing economy: The role of personal photos in Airbnb. *Tourism Management, 55*, 62–73. https://doi.org/10.1016/j.tourman.2016.01.013 | Diap. 4 (notas): con datos de los anuncios de Estocolmo, cuanto más confiable parece el anfitrión en su foto, más alto el precio del anuncio y mayor la probabilidad de que lo elijan. Evidencia académica de que la confianza se diseña. |
 
 ### Entrevistas y testimonios documentados (opiniones de fundadores; distinguir de hechos)
 

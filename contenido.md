@@ -174,8 +174,10 @@ mismo `data-id`, y reveal.js la anima entre diapositivas consecutivas:
 - Propuesta de valor:
   - Huésped: un lugar donde quedarse, con alguien local.
   - Anfitrión: ingresos con un espacio que ya tiene.
-- Cita: *"Un sistema de reputación bien diseñado es clave para construir confianza."* — Joe Gebbia, TED 2016 [F11]
-- Pie: Fuentes: Airbnb, Form S-1 (2020); NPR/TED (2016); Airbnb Newsroom (2026).
+- **Qué la diferencia** (punto c de la guía): frente al hotel, menor costo y las comodidades de un hogar [F23];
+  frente a otros sitios de anuncios, perfiles con foto, reseñas y pago seguro [F11, F24].
+- La cita de Gebbia («un sistema de reputación bien diseñado es clave para construir confianza») pasó a las notas [F11].
+- Pie: Fuentes: Airbnb, Form S-1 (2020); Gebbia, NPR/TED (2016); Guttentag (2015); Ert, Fleischer y Magen (2016); Airbnb Newsroom (2026).
 
 **Datos**
 - Nate Blecharczyk, ingeniero de software, se une en 2008 [F1].
@@ -242,6 +244,8 @@ mismo `data-id`, y reveal.js la anima entre diapositivas consecutivas:
 - Cifra grande: **USD 200 → USD 400 por semana** (2009) [F10]
 - Capital semilla: **Sequoia Capital** (2009) [F16, F18]
 - Marzo de 2009: AirBed & Breakfast → **Airbnb**; también casas y apartamentos completos [F4]
+- Franja **Claves del éxito (análisis del grupo)**, punto f de la guía: Decisiones (ir en persona y diseñar la
+  confianza) · Capacidades (diseño e ingeniería en el mismo equipo) · Condiciones (Y Combinator y capital semilla).
 - Pie: Fuentes: P. Graham (2013); First Round Review (2015); VentureBeat (2010); Sequoia Capital; Airbnb Newsroom.
 
 **Datos**
@@ -409,8 +413,8 @@ mismo `data-id`, y reveal.js la anima entre diapositivas consecutivas:
 
 **Texto en pantalla**
 - Título: **Referencias**
-- 8–10 referencias principales en formato APA abreviado (autor, fecha, título, enlace), en dos columnas:
-  F1, F2, F3, F4, F5, F8, F10, F11, F14, F15. Lista completa en las notas del presentador y en `fuentes.md`.
+- 18 referencias en formato APA abreviado (autor, fecha, título, enlace): oficiales (8), independientes y
+  entrevistas (8) y académicas (2: F23, F24). Lista completa en las notas del presentador y en `fuentes.md`.
 - Pie: "Consultadas el 18 de octubre de 2026".
 - Cierre: ícono de Airbnb + **"Gracias. ¿Preguntas?"**
 
